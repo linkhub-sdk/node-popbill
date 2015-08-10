@@ -6,6 +6,9 @@
   "contributors": [{
     "name": "Kim Seongjun",
     "email": "pallet027@gmail.com"
+  },{
+    "name":"JeongYohan",
+    "email":"frenchofkiss@gmail.com"
   }],
   "main": "index.js",
   "engines": { 
