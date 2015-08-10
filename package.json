@@ -24,6 +24,11 @@
   "keywords": [
     "popbill",
     "taxinvoice",
+    "cashbill",
+    "statement",
+    "closedown",
+    "SMS",
+    "FAX",
     "api",
     "sdk"
   ],
