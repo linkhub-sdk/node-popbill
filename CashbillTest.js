@@ -45,7 +45,7 @@ var cashbill = {
 	tradeUsage : '소득공제용', 
 	taxationType : '과세', 
 
-	identityNum : '01043245117', 
+	identityNum : '01011112222', 
 
 	franchiseCorpNum : '1234567890',
 	franchiseCorpName : '발행자 상호_수정', 
@@ -57,8 +57,8 @@ var cashbill = {
 	customerName : '고객명', 
 	itemName : '상품명', 
 	orderNumber : '주문번호', 
-	email : 'frenchofkiss@gmail.com', 
-	hp : '01043245117', 
+	email : 'test@test.com', 
+	hp : '000111222', 
 	fax : '07075103710', 
 
 	supplyCost : '15000', 
