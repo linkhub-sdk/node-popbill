@@ -17,7 +17,7 @@ cashbillService.getBalance('1234567890',
   }
 );
 
-// //PBOX(매출), TBOX(임시), WRITE(현금영수증 작성)
+//PBOX(매출), TBOX(임시), WRITE(현금영수증 작성)
 cashbillService.getURL('1234567890','WRITE', 'testkorea',
 	function(response){
 		console.log(response);
@@ -25,7 +25,7 @@ cashbillService.getURL('1234567890','WRITE', 'testkorea',
 		console.log(error);
 	});
 
-cashbillService.getUnitCost('1234567890', 
+cashbillService.getUnitCost('1234567890',
 	function(response){
 		console.log(response)
 	}, function(error){
@@ -41,30 +41,30 @@ cashbillService.checkMgtKeyInUse('1234567890', '20150807-01',
 
 var cashbill = {
 	mgtKey : '20150810-06',
-	tradeType : '승인거래', 
-	tradeUsage : '소득공제용', 
-	taxationType : '과세', 
+	tradeType : '승인거래',
+	tradeUsage : '소득공제용',
+	taxationType : '과세',
 
-	identityNum : '01011112222', 
+	identityNum : '01011112222',
 
 	franchiseCorpNum : '1234567890',
-	franchiseCorpName : '발행자 상호_수정', 
+	franchiseCorpName : '발행자 상호_수정',
 	franchiseCEOName : '발행자 대표자 성명',
-	franchiseAddr : '발행자 주소', 
-	franchiseTEL : '07075103710', 
+	franchiseAddr : '발행자 주소',
+	franchiseTEL : '07075103710',
 
 	smssendYN : false,
-	customerName : '고객명', 
-	itemName : '상품명', 
-	orderNumber : '주문번호', 
-	email : 'test@test.com', 
-	hp : '000111222', 
-	fax : '07075103710', 
+	customerName : '고객명',
+	itemName : '상품명',
+	orderNumber : '주문번호',
+	email : 'test@test.com',
+	hp : '000111222',
+	fax : '07075103710',
 
-	supplyCost : '15000', 
-	tax : '5000', 
+	supplyCost : '15000',
+	tax : '5000',
 	serviceFee : '0',
-	totalAmount : '20000', 
+	totalAmount : '20000',
 };
 
 var cashbill = {};
@@ -128,7 +128,7 @@ cashbillService.issue('1234567890', '20150810-02', '발행메모', 'testkorea',
  		console.log(error);
  	});
 
-cashbillService.cancelIssue('1234567890', '20150810-01', '발행취소메모', 
+cashbillService.cancelIssue('1234567890', '20150810-01', '발행취소메모',
  	function(response){
  		console.log(response);
  	}, function(error){
@@ -163,7 +163,7 @@ cashbillService.sendEmail('1234567890', '20150810-01', 'test@test.com','testkore
 		console.log(error);
 	})
 
-cashbillService.sendSMS('1234567890', '20150810-01', '07075103710', '000111222', '현금영수증 문자메시지 테스트', 
+cashbillService.sendSMS('1234567890', '20150810-01', '07075103710', '000111222', '현금영수증 문자메시지 테스트',
 	function(response){
 		console.log(response);
 	}, function(error){
@@ -184,14 +184,14 @@ cashbillService.sendFAX('1234567890', '20150810-01', '07075103710', '000111222',
 		console.log(error);
 	});
 
-cashbillService.sendFAX('1234567890', '20150810-01', '07075103710', '000111222', 
+cashbillService.sendFAX('1234567890', '20150810-01', '07075103710', '000111222',
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
 	});
 
-cashbillService.getDetailInfo('1234567890', '20150810-01', 'testkorea', 
+cashbillService.getDetailInfo('1234567890', '20150810-01', 'testkorea',
 	function(response){
 		console.log(response);
 	}, function(error){
@@ -221,14 +221,14 @@ cashbillService.getLogs('1234567890', '20150810-01', 'testkorea',
 		console.log(error);
 	})
 
-cashbillService.getEPrintURL('1234567890', '20150810-01', 'testkorea', 
+cashbillService.getEPrintURL('1234567890', '20150810-01', 'testkorea',
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
 	})
 
-cashbillService.getMassPrintURL('1234567890', MgtKeyList, 'testkorea', 
+cashbillService.getMassPrintURL('1234567890', MgtKeyList, 'testkorea',
 	function(response){
 		console.log(response);
 	}, function(error){
