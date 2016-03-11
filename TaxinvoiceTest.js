@@ -11,6 +11,112 @@ popbill.config({
 
 var taxinvoiceService = popbill.TaxinvoiceService();
 
+State = ['100','200','3**'];
+Type = ['N', 'M'];
+TaxType = ['T','Z'];
+
+taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'R', '20160305', '20160308', State, Type, TaxType, null, 'D', 1, 10,
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+});
+
+Taxinvoice = {
+    writeDate : '20160309',
+    chargeDirection : '정과금',
+    issueType : '정발행',
+    purposeType : '영수',
+    issueTiming : '직접발행',
+    taxType : '과세',
+    invoicerCorpNum : '1234567890',
+    invoicerMgtKey : '20160309-14',
+    invoicerTaxRegID : '1234',
+    invoicerCorpName : '공급자 상호',
+    invoicerCEOName : '대표자 성명',
+    invoicerAddr : '공급자 주소',
+    invoicerBizClass : '공급자 업종',
+    invoicerBizType : '공급자 업태',
+    invoicerContactName : '공급자 담당자명',
+    invoicerTEL : '070-7510-3710',
+    invoicerHP : '010-000-111',
+    invoicerEmail : 'test@test.com',
+    invoicerSMSSendYN : false,
+    invoiceeType : '사업자',
+    invoiceeCorpNum : '8888888888',
+    invoiceeMgtKey : '',
+    invoiceeTaxRegID : '1234',
+    invoiceeCorpName : '공급받는자 상호',
+    invoiceeCEOName : '공급받는자 대표자 성명',
+    invoiceeAddr : '공급받는자 주소',
+    invoiceeBizClass : '공급받는자 업종',
+    invoiceeBizType : '공급받는자 업태',
+    invoiceeContactName1 : '공급받는자 담당자명',
+    invoiceeTEL1 : '010-111-222',
+    invoiceeHP1 : '070-111-222',
+    invoiceeEmail1 : 'test@test.com',
+    invoiceeSMSSendYN : false,
+    taxTotal : '2000',
+    supplyCostTotal : '20000',
+    totalAmount : '22000',
+    //modifyCode
+    //originalTaxinvoiceKey
+    serialNum : '123',
+    cash : '',
+    chkBill : '',
+    note : '',
+    credit : '',
+    remark1 : '비고1',
+    remark2 : '',
+    remark3 : '',
+    kwon : '',
+    ho : '',
+    businessLicenseYN : false,
+    bankBookYN : false,
+
+    detailList : [
+    {
+      serialNum : 1,
+      itemName : '품명',
+      purchaseDT : '20160309',
+      unitCost : '2000',
+      qty : '1',
+      spec : 'Box',
+      supplyCost :'20000', //공급가액
+      tax : '2000',
+      remark : '비고'
+    },
+    {
+      serialNum : 2,
+      itemName : '품명2'
+    },
+    ],
+
+    addContactList : [
+    {
+      serialNum : 1,
+      contactName : '담당자 성명',
+      email : 'test@test.com',
+    },
+    {
+      serialNum : 2,
+      contactName : '담당자 성명2',
+      email : 'test@test.com',
+    },
+    ]
+  };
+
+
+taxinvoiceService.registIssue('', Taxinvoice, false, false, "즉시발행 메모", "안내메일제목", "", "testkorea",
+  function(response){
+    console.log(response)
+  },
+  function(error){
+    console.log(error);
+  });
+
+
+
 taxinvoiceService.checkID('testkorea',
   function(response){
     console.log("[" + response.code + "] " + response.message);

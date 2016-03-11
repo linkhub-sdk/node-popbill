@@ -11,6 +11,41 @@ popbill.config({
 
 var cashbillService = popbill.CashbillService();
 
+var cashbill = {
+	mgtKey : '20160311-02',
+	tradeType : '승인거래',
+	tradeUsage : '소득공제용',
+	taxationType : '과세',
+
+	identityNum : '0100001234',
+
+	franchiseCorpNum : '1234567890',
+	franchiseCorpName : '발행자 상호_수정',
+	franchiseCEOName : '발행자 대표자 성명',
+	franchiseAddr : '발행자 주소',
+	franchiseTEL : '07075103710',
+
+	smssendYN : false,
+	customerName : '고객명',
+	itemName : '상품명',
+	orderNumber : '주문번호',
+	email : 'test@test.com',
+	hp : '000111222',
+	fax : '07075103710',
+
+	supplyCost : '15000',
+	tax : '5000',
+	serviceFee : '0',
+	totalAmount : '20000',
+};
+
+cashbillService.registIssue('1234567890',cashbill, "즉시발행 메모",
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	});
+
 cashbillService.getBalance('1234567890',
   function(Point){
     console.log(Point)

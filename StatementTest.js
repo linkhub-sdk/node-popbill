@@ -28,18 +28,93 @@ statementService.checkMgtKeyInUse('1234567890','121','20150810-01',
 		console.log(error);
 	});
 
+
 var statement = {
-	writeDate : '20150810',
+	writeDate : '20160310',
 	purposeType : '영수',
-	taxType : '과세', 
+	taxType : '과세',
 	formCode : '',
 	itemCode : 121,
-	mgtKey : '20150810-21',
+	mgtKey : '20160310-07',
 	senderCorpNum : '1234567890',
 	senderCorpName : '공급자 상호',
 	senderAddr : '공급자 주소',
 	senderCEOName : '공급자 대표자 성명',
-	senderTaxRegID : '', 
+	senderTaxRegID : '1234',
+	senderBizClass : '종목',
+	senderBizType : '업태',
+	senderContactName : '담당자명',
+	senderEmail : 'test@test.com',
+	senderTEL : '070-7510-3710',
+	senderHP : '000-111-222',
+	receiverCorpNum : '8888888888',
+	receiverCorpName : '공급받는자상호',
+	receiverCEOName : '공급받는자 대표자 성명',
+	receiverAddr : '공급받는자 주소',
+	receiverTaxRegID : '1234',
+	receiverBizClass : '업종',
+	receiverBizType : '업태',
+	receiverContactName : '공급받는자 담당자 성명',
+	receiverEmail : 'test@test.com',
+	receiverTEL : '010-1234-1234',
+	receiverHP : '010-4321-4321-',
+	supplyCostTotal : '20000',
+	taxTotal : '2000',
+	totalAmount : '22000',
+	serialNum : '1',
+	remark1 : '비고1',
+	remark2 : '',
+	remark3 : '',
+	businessLicenseYN : false,
+	bankBookYN : false,
+
+	detailList : [
+		{
+			serialNum : 1,
+			itemName : '품명',
+			purchaseDT : '20160309',
+			qty : '1',
+			spec : '규격',
+			supplyCost :'20000', //공급가액
+			unitCost : '15000',
+			remark : '비고',
+			tax : '2000'
+		},
+		{
+			serialNum : 2,
+			itemName : '품명2'
+		}
+	],
+
+	propertyBag : {
+		Balance : '2000',
+		Deposit : '500',
+		CBalance : '2500'
+	}
+};
+
+statementService.registIssue('1234567890', statement,
+	function(response){
+	 console.log(response)
+	},
+	function(response){
+     console.log("[" + response.code + "] " + response.message)
+ });
+
+
+
+var statement = {
+	writeDate : '20160309',
+	purposeType : '영수',
+	taxType : '과세',
+	formCode : '',
+	itemCode : 121,
+	mgtKey : '20160309-21',
+	senderCorpNum : '1234567890',
+	senderCorpName : '공급자 상호',
+	senderAddr : '공급자 주소',
+	senderCEOName : '공급자 대표자 성명',
+	senderTaxRegID : '',
 	senderBizClass : '업종',
 	snederbizType : '업태',
 	senderContactName : '담당자명',
@@ -70,10 +145,10 @@ var statement = {
 	detailList : [
 		{
 			serialNum : 1,
-			itemName : '품명', 
-			purchaseDT : '20150803',
-			qty : '1', 
-			sepc : '규격', 
+			itemName : '품명',
+			purchaseDT : '20160309',
+			qty : '1',
+			spec : '규격',
 			supplyCost :'20000', //공급가액
 			tax : '2000'
 		},
@@ -86,7 +161,78 @@ var statement = {
 	propertyBag : {
 		Balance : '2000',
 		Deposit : '500',
-		CBalance : '2500'	
+		CBalance : '2500'
+	}
+};
+
+statementService.FAXSend('1234567890', statement, '070-7510-3710', '000-111-222',
+	function(response){
+	 console.log(response)
+	},
+	function(response){
+     console.log("[" + response.code + "] " + response.message)
+ });
+
+
+var statement = {
+	writeDate : '20150810',
+	purposeType : '영수',
+	taxType : '과세',
+	formCode : '',
+	itemCode : 121,
+	mgtKey : '20150810-21',
+	senderCorpNum : '1234567890',
+	senderCorpName : '공급자 상호',
+	senderAddr : '공급자 주소',
+	senderCEOName : '공급자 대표자 성명',
+	senderTaxRegID : '',
+	senderBizClass : '업종',
+	snederbizType : '업태',
+	senderContactName : '담당자명',
+	senderEmail : 'test@test.com',
+	senderTEL : '070-7510-3710',
+	senderHP : '000-111-222',
+	receiverCorpNum : '8888888888',
+	receiverCorpName : '공급받는자상호',
+	receiverCEOName : '공급받는자 대표자 성명',
+	receiverAddr : '공급받는자 주소',
+	recieverTaxRegID : '',
+	receiverBizClass : '업종',
+	recieverBizType : '업태',
+	receiverContactName : '공급받는자 담당자 성명',
+	receiverEmail : 'test@test.com',
+	receiverTEL : '',
+	receiverHP : '',
+	supplyCostTotal : '20000',
+	taxTotal : '2000',
+	totalAmount : '22000',
+	serialNum : '1',
+	remark1 : '',
+	remark2 : '',
+	remark3 : '',
+	businessLicenseYN : false,
+	bankBookYN : false,
+
+	detailList : [
+		{
+			serialNum : 1,
+			itemName : '품명',
+			purchaseDT : '20150803',
+			qty : '1',
+			sepc : '규격',
+			supplyCost :'20000', //공급가액
+			tax : '2000'
+		},
+		{
+			serialNum : 2,
+			itemName : '품명2'
+		}
+	],
+
+	propertyBag : {
+		Balance : '2000',
+		Deposit : '500',
+		CBalance : '2500'
 	}
 };
 
@@ -303,7 +449,7 @@ var userID = "testkorea"; // 팝빌회원 아이디
 var FilePaths = ['./테스트.jpg']; // 파일경로
 var fileName = FilePaths[0].replace(/^.*[\\\/]/, ''); // 파일명
 
-statementService.attachFile(corpNum, '121', mgtKey, fileName, FilePaths, userID, 
+statementService.attachFile(corpNum, '121', mgtKey, fileName, FilePaths, userID,
 	function(result){
 	  console.log(result)
 	}, function(Error){
