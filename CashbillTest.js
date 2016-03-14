@@ -87,12 +87,12 @@ cashbillService.checkMgtKeyInUse('1234567890', '20150807-01',
 	})
 
 var cashbill = {
-	mgtKey : '20150810-06',
+	mgtKey : '20160314-01',
 	tradeType : '승인거래',
 	tradeUsage : '소득공제용',
 	taxationType : '과세',
 
-	identityNum : '01011112222',
+	identityNum : '0100001234',
 
 	franchiseCorpNum : '1234567890',
 	franchiseCorpName : '발행자 상호_수정',
@@ -113,8 +113,6 @@ var cashbill = {
 	serviceFee : '0',
 	totalAmount : '20000',
 };
-
-var cashbill = {};
 
 cashbillService.register('1234567890',cashbill,
 	function(response){
@@ -161,6 +159,13 @@ cashbillService.update('1234567890', '20150810-01', cashbill,'testkorea',
 		console.log(error);
 	})
 
+cashbillService.issue('1234567890', '20160314-01',
+ 	function(response){
+ 		console.log(response);
+ 	}, function(error){
+ 		console.log(error);
+ 	});
+
 
 cashbillService.issue('1234567890', '20150810-01', '발행메모',
  	function(response){
@@ -168,6 +173,7 @@ cashbillService.issue('1234567890', '20150810-01', '발행메모',
  	}, function(error){
  		console.log(error);
  	});
+
 cashbillService.issue('1234567890', '20150810-02', '발행메모', 'testkorea',
  	function(response){
  		console.log(response);
