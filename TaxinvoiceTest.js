@@ -14,8 +14,9 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 State = ['100','200','3**'];
 Type = ['N', 'M'];
 TaxType = ['T','Z'];
+LateOnly = null;
 
-taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'R', '20160305', '20160308', State, Type, TaxType, null, 'D', 1, 10,
+taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'R', '20160305', '20160308', State, Type, TaxType, LateOnly, 'D', 1, 10,
   function(response){
     console.log(response);
   }, function(error){
