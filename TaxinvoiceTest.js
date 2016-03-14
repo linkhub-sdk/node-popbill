@@ -274,7 +274,7 @@ var joinInfo =  {
 taxinvoiceService.joinMember(joinInfo,
   function(result){
     console.log(result);
-  });
+});
 
  var Taxinvoice = {
     writeDate : '20160314',
@@ -284,7 +284,7 @@ taxinvoiceService.joinMember(joinInfo,
     issueTiming : '직접발행',
     taxType : '과세',
     invoicerCorpNum : '1234567890',
-    invoicerMgtKey : '20160314-14',
+    invoicerMgtKey : '20160314-25',
     invoicerTaxRegID : '1234',
     invoicerCorpName : '공급자 상호',
     invoicerCEOName : '대표자 성명',
@@ -507,7 +507,7 @@ taxinvoiceService.cancelSend('1234567890', popbill.MgtKeyType.SELL, '20150810-04
     console.log(result);
   })
 
-taxinvoiceService.issue('1234567890', popbill.MgtKeyType.SELL, '20150810-07', '발행메모', '발행메일제목', true, 'testkorea',
+taxinvoiceService.issue('1234567890', popbill.MgtKeyType.SELL, '20160314-25', 'memo', '', false, 'testkorea',
   function(response){
     console.log(response);
   }, function(result){
