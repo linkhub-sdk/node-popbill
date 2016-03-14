@@ -11,6 +11,13 @@ popbill.config({
 
 var statementService = popbill.StatementService();
 
+statementService.attachStatement('1234567890', 121, '20160314-01', 121, '20160314-02',
+  function(response){
+    console.log(response);
+  }, function(error){
+  	console.log(error);
+});
+
 statementService.detachStatement('1234567890', 121, '20160314-01', 121, '20160314-02',
   function(response){
     console.log(response);
@@ -192,19 +199,19 @@ statementService.FAXSend('1234567890', statement, '070-7510-3710', '000-111-222'
 
 
 var statement = {
-	writeDate : '20150810',
+	writeDate : '20160314',
 	purposeType : '영수',
 	taxType : '과세',
 	formCode : '',
 	itemCode : 121,
-	mgtKey : '20150810-21',
+	mgtKey : '20160314-23',
 	senderCorpNum : '1234567890',
 	senderCorpName : '공급자 상호',
 	senderAddr : '공급자 주소',
 	senderCEOName : '공급자 대표자 성명',
 	senderTaxRegID : '',
 	senderBizClass : '업종',
-	snederbizType : '업태',
+	senderBizType : '업태',
 	senderContactName : '담당자명',
 	senderEmail : 'test@test.com',
 	senderTEL : '070-7510-3710',
@@ -215,7 +222,7 @@ var statement = {
 	receiverAddr : '공급받는자 주소',
 	recieverTaxRegID : '',
 	receiverBizClass : '업종',
-	recieverBizType : '업태',
+	receiverBizType : '업태',
 	receiverContactName : '공급받는자 담당자 성명',
 	receiverEmail : 'test@test.com',
 	receiverTEL : '',
@@ -304,7 +311,7 @@ statementService.delete('1234567890', '121', '20150810-02', 'testkorea',
 		console.log(response)
 });
 
-statementService.issue('1234567890','121', '20150810-09', '메모', '안내메일 제목', 'testkorea',
+statementService.issue('1234567890', 121, '20160314-23', 'memo', '', '',
 	function(response){
 		console.log(response);
 	},

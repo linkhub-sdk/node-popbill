@@ -202,7 +202,7 @@ cashbillService.getLogs('1234567890', '20150805-04', 'testkorea',
 		console.log(error);
 	});
 
-cashbillService.sendEmail('1234567890', '20150810-01', 'test@test.com',
+cashbillService.sendEmail('1234567890', '20160314-01', 'test@test.com',
 	function(response){
 		console.log(response);
 	}, function(error){
@@ -216,7 +216,7 @@ cashbillService.sendEmail('1234567890', '20150810-01', 'test@test.com','testkore
 		console.log(error);
 	})
 
-cashbillService.sendSMS('1234567890', '20150810-01', '07075103710', '000111222', '현금영수증 문자메시지 테스트',
+cashbillService.sendSMS('1234567890', '20160314-01', '07075103710', '000111222', '현금영수증 문자메시지 테스트',
 	function(response){
 		console.log(response);
 	}, function(error){
