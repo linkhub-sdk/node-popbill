@@ -11,6 +11,13 @@ popbill.config({
 
 var messageService = popbill.MessageService();
 
+messageService.getAutoDenyList('1234567890',
+  function(response){
+    console.log(response);
+  },function(error){
+	console.log(error);
+});
+
 State = [1,2,3,4];
 Item = ['SMS','LMS','MMS'];
 ReserveYN = false;
@@ -158,4 +165,6 @@ messageService.cancelReserve('1234567890', '015081013000000006',
 		console.log(response);
 	}, function(error){
 		console.log(error);
-	})
+	});
+
+

@@ -23,14 +23,14 @@ taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'R', '20160305', 
 });
 
 Taxinvoice = {
-    writeDate : '20160309',
+    writeDate : '20160314',
     chargeDirection : '정과금',
     issueType : '정발행',
     purposeType : '영수',
     issueTiming : '직접발행',
     taxType : '과세',
     invoicerCorpNum : '1234567890',
-    invoicerMgtKey : '20160309-14',
+    invoicerMgtKey : '20160314-10',
     invoicerTaxRegID : '1234',
     invoicerCorpName : '공급자 상호',
     invoicerCEOName : '대표자 성명',
@@ -106,8 +106,23 @@ Taxinvoice = {
     ]
   };
 
+taxinvoiceService.registIssue('1234567890', Taxinvoice, false, false, "메모", "", "", "testkorea",
+  function(response){
+    console.log(response);
+  },
+  function(error){
+    console.log(error);
+  });
 
-taxinvoiceService.registIssue('', Taxinvoice, false, false, "즉시발행 메모", "안내메일제목", "", "testkorea",
+taxinvoiceService.attachStatement('1234567890', popbill.MgtKeyType.SELL, "20160314-01", 121, "20160310-07",
+  function(response){
+    console.log(response)
+  },
+  function(error){
+    console.log(error);
+  });
+
+taxinvoiceService.detachStatement('1234567890', popbill.MgtKeyType.SELL, "20160314-01", 121, "20160310-07",
   function(response){
     console.log(response)
   },
@@ -247,7 +262,6 @@ var joinInfo =  {
   CEOName : '대표자성명',
   CorpName : '테스트상호',
   Addr : '주소',
-  ZipCode : '우편번호',
   BizType : '업태',
   BizClass : '업종',
   ContactName : '담당자 성명',
@@ -263,14 +277,14 @@ taxinvoiceService.joinMember(joinInfo,
   });
 
  var Taxinvoice = {
-    writeDate : '20150810',
+    writeDate : '20160314',
     chargeDirection : '정과금',
     issueType : '정발행',
     purposeType : '영수',
     issueTiming : '직접발행',
     taxType : '과세',
     invoicerCorpNum : '1234567890',
-    invoicerMgtKey : '20150810-23',
+    invoicerMgtKey : '20160314-14',
     invoicerTaxRegID : '1234',
     invoicerCorpName : '공급자 상호',
     invoicerCEOName : '대표자 성명',
@@ -320,7 +334,8 @@ taxinvoiceService.joinMember(joinInfo,
       itemName : '품명',
       purchaseDT : '20150803',
       qty : '1',
-      sepc : '규격',
+      unitCost : '20000',
+      spec : '규격',
       supplyCost :'20000', //공급가액
       tax : '2000'
     },
@@ -343,9 +358,6 @@ taxinvoiceService.joinMember(joinInfo,
     },
     ]
   };
-
-var Taxinvoice2 = {};
-
 
 taxinvoiceService.register('1234567890', Taxinvoice,
   function(response){
@@ -405,7 +417,7 @@ taxinvoiceService.delete('1234567890', popbill.MgtKeyType.SELL, '20150810-02', '
     console.log(result);
   })
 
-taxinvoiceService.getInfo('1068647762', popbill.MgtKeyType.SELL, '20150810-02', 'testkorea',
+taxinvoiceService.getInfo('1234567890', popbill.MgtKeyType.SELL, '20160314-01', 'testkorea',
   function(response){
     console.log(response)
   },
