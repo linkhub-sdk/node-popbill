@@ -3,6 +3,8 @@ var StatementService = require('./lib/StatementService');
 var CashbillService = require('./lib/CashbillService');
 var MessageService = require('./lib/MessageService');
 var FaxService = require('./lib/FaxService');
+var HTTaxinvoiceService = require('./lib/HTTaxinvoiceService');
+var HTCashbillService = require('./lib/HTCashbillService');
 var ClosedownService = require('./lib/ClosedownService');
 var linkhub = require('linkhub');
 
@@ -49,6 +51,20 @@ exports.FaxService = function() {
     this._FaxService = new FaxService(configuration);
   }
   return this._FaxService;
+}
+
+exports.HTTaxinvoiceService = function() {
+  if(!this._HTTaxinvoiceService) {
+    this._HTTaxinvoiceService = new HTTaxinvoiceService(configuration);
+  }
+  return this._HTTaxinvoiceService;
+}
+
+exports.HTCashbillService = function() {
+  if(!this._HTCashbillService) {
+    this._HTCashbillService = new HTCashbillService(configuration);
+  }
+  return this._HTCashbillService;
 }
 
 exports.ClosedownService = function() {
