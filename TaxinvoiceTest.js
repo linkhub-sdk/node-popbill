@@ -11,6 +11,13 @@ popbill.config({
 
 var taxinvoiceService = popbill.TaxinvoiceService();
 
+taxinvoiceService.getChargeInfo('1234567890', 'testkorea',
+  function(response){
+    console.log(response);
+  }, function(result){
+    console.log(result);
+  })
+
 State = ['100','200','3**'];
 Type = ['N', 'M'];
 TaxType = ['T','Z'];
@@ -630,20 +637,3 @@ taxinvoiceService.getEmailPublicKeys('1234567890', 'testkorea',
   }, function(result){
     console.log(result);
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

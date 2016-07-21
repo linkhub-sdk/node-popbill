@@ -11,7 +11,14 @@ popbill.config({
 
 var closedownService = popbill.ClosedownService();
 
-closedownService.getUnitCost('1234567890', 
+closedownService.getChargeInfo('1234567890', 'testkorea',
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	})
+
+closedownService.getUnitCost('1234567890',
 	function(response){
 		console.log('Unitcost : ' + response);
 	}, function(error){
@@ -40,4 +47,3 @@ closedownService.checkCorpNums('1234567890', CorpNumList,
 	}, function(error){
 		console.log(error);
 	})
-

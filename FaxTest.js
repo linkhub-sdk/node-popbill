@@ -11,6 +11,14 @@ popbill.config({
 
 var faxService = popbill.FaxService();
 
+faxService.getChargeInfo('1234567890', 'testkorea',
+  function(response){
+    console.log(response);
+  }, function (error){
+    console.log(error);
+  }
+);
+
 State = [ 1, 2, 3, 4 ];
 ReserveYN = false;
 SenderOnly = false;

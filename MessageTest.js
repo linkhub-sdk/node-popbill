@@ -11,6 +11,12 @@ popbill.config({
 
 var messageService = popbill.MessageService();
 
+messageService.getChargeInfo('1234567890', popbill.MessageType.MMS, '',
+  function(response){
+    console.log(response);
+});
+
+
 messageService.getAutoDenyList('1234567890',
   function(response){
     console.log(response);
@@ -166,5 +172,3 @@ messageService.cancelReserve('1234567890', '015081013000000006',
 	}, function(error){
 		console.log(error);
 	});
-
-

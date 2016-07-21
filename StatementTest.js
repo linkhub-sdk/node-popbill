@@ -11,6 +11,13 @@ popbill.config({
 
 var statementService = popbill.StatementService();
 
+statementService.getChargeInfo('1234567890', 121, 'testkorea',
+  function(response){
+    console.log(response);
+  }, function(error){
+  	console.log(error);
+});
+
 statementService.attachStatement('1234567890', 121, '20160314-01', 121, '20160314-02',
   function(response){
     console.log(response);
@@ -503,18 +510,3 @@ statementService.deleteFile('1234567890', '121', '20150810-21','66492D08-B3BE-44
 	function(response){
 		console.log(response)
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

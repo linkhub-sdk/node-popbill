@@ -11,6 +11,13 @@ popbill.config({
 
 var cashbillService = popbill.CashbillService();
 
+cashbillService.getChargeInfo('1234567890', 'testkorea',
+	function(response){
+		console.log(response)
+	}, function(error){
+		console.log(error)
+	});
+
 State = ['100', '200', '3**'];
 TradeType = ['N', 'C'];
 TradeUsage = ['P', 'C'];
@@ -301,14 +308,3 @@ cashbillService.getPopUpURL('1234567890', '20150810-01', 'testkorea',
 	}, function(error){
 		console.log(error);
 	})
-
-
-
-
-
-
-
-
-
-
-
