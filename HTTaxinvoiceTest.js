@@ -27,7 +27,7 @@ htTaxinvoiceService.requestJob('1234567890', KeyType, 'W', '20160601', '20160831
     console.log(error);
 });
 
-jobID = "016072111000000004";
+jobID = "016072114000000004";
 
 htTaxinvoiceService.getJobState('1234567890', jobID,
   function(response){
@@ -42,30 +42,29 @@ htTaxinvoiceService.listActiveJob('1234567890', 'testkorea',
   }, function(error){
     console.log(error);
 });
-BaseService.addMethod(HTTaxinvoiceService.prototype, "search", function(CorpNum, JobID, Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, Page, PerPage, Order, UserID, success, error){
 
 Type = ['N', 'M'];
 TaxType = ['T','N','Z'];
 PurposeType = ['R', 'C', 'N'];
 TaxRegIDType = 'S';
-TaxRegIDYN = '0';
+TaxRegIDYN = '';
 TaxRegID = '';
 
-htTaxinvoiceService.search('1234567890', '016072111000000004', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, 1, 10, 'D', 'testkorea',
+htTaxinvoiceService.search('1234567890', '016072114000000005', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, 1, 10, 'D', 'testkorea',
   function(response){
     console.log(response);
   }, function(error){
     console.log(error);
 });
 
-htTaxinvoiceService.summary('1234567890', '016072111000000004', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, 'testkorea',
+htTaxinvoiceService.summary('1234567890', '016072114000000005', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, 'testkorea',
   function(response){
     console.log(response);
   }, function(error){
     console.log(error);
 });
 
-ntsconfirmNum = '20160720410000290000009b';
+ntsconfirmNum = '201607204100002900001205';
 
 htTaxinvoiceService.getTaxinvoice('1234567890', ntsconfirmNum, 'testkorea',
   function(response){

@@ -27,7 +27,7 @@ htCashbillService.requestJob('1234567890', KeyType, '20160601', '20160831',
     console.log(error);
 });
 
-jobID = "016072114000000002";
+jobID = "016072114000000007";
 
 htCashbillService.getJobState('1234567890', jobID,
   function(response){
@@ -47,14 +47,14 @@ htCashbillService.listActiveJob('1234567890', 'testkorea',
 TradeType = ['N', 'C'];
 TradeUsage = ['P', 'C'];
 
-htCashbillService.search('1234567890', '016072114000000002', TradeType, TradeUsage, 1, 10, 'D', 'testkorea',
+htCashbillService.search('1234567890', '016072114000000007', TradeType, TradeUsage, 1, 10, 'D', 'testkorea',
   function(response){
     console.log(response);
   }, function(error){
     console.log(error);
 });
 
-htCashbillService.summary('1234567890', '016072114000000002', TradeType, TradeUsage, 'testkorea',
+htCashbillService.summary('1234567890', '016072114000000007', TradeType, TradeUsage, 'testkorea',
   function(response){
     console.log(response);
   }, function(error){
