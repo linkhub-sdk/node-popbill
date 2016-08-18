@@ -32,10 +32,11 @@ statementService.detachStatement('1234567890', 121, '20160314-01', 121, '2016031
   	console.log(error);
 });
 
-State = ['100', '200', '3**'];
+State = ['200', '3**'];
 ItemCode = [121,122,123,124,125,126];
+QString = ''
 
-statementService.search('1234567890','R','20160101', '20160311', State, ItemCode, 'A', 1, 10,
+statementService.search('1234567890','W','20160701', '20160831', State, ItemCode, 'D', 1, 10,
   function(response){
     console.log(response);
   }, function(error){

@@ -11,6 +11,8 @@ popbill.config({
 
 var taxinvoiceService = popbill.TaxinvoiceService();
 
+SDate = '20160701';
+EDate = '20160831';
 State = ['3**','6**'];
 Type = ['N', 'M'];
 TaxType = ['T','N','Z'];
@@ -18,8 +20,9 @@ LateOnly = null;
 TaxRegIDType = 'S'
 TaxRegIDYN = '';
 TaxRegID = '';
+QString = '';
 
-taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', '20160601', '20160731', State, Type, TaxType, LateOnly, 'D', 1, 10, TaxRegIDType, TaxRegIDYN, TaxRegID, 'testkorea',
+taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate, State, Type, TaxType, LateOnly, 'D', 1, 10, TaxRegIDType, TaxRegIDYN, TaxRegID, QString, 'testkorea',
   function(response){
     console.log(response);
   }, function(error){

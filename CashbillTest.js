@@ -18,17 +18,19 @@ cashbillService.getChargeInfo('1234567890', 'testkorea',
 		console.log(error)
 	});
 
-State = ['100', '200', '3**'];
+State = ['100', '200', '3**', '4**'];
 TradeType = ['N', 'C'];
 TradeUsage = ['P', 'C'];
 TaxationType = ['T', 'N'];
+QString = '0100001234';
 
-cashbillService.search('1234567890','R', '20160101', '20160311', State, TradeType, TradeUsage, TaxationType, 'D', 1, 5,
+cashbillService.search('1234567890','T', '20160701', '20160831', State, TradeType, TradeUsage, TaxationType, QString, 'D', 1, 30,
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
 	});
+
 
 var cashbill = {
 	mgtKey : '20160311-02',
