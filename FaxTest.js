@@ -50,21 +50,21 @@ var Receivers = [
 	},
 ]
 
-faxService.sendFax('1234567890','07075103710','발신자명','111222333', '수신자명', FilePaths, '2015810200000',
+faxService.sendFax('1234567890','07075103710','111222333', '수신자명', FilePaths, '',
 	function(receiptNum){
 		console.log('receiptNum is : ' + receiptNum);
 	}, function(error){
 		console.log(error);
 	});
 
-faxService.sendFax('1234567890','07075103710','발신자명',Receivers, FilePaths, '',
+faxService.sendFax('1234567890','07075103710',Receivers, FilePaths, '',
 	function(receiptNum){
 		console.log('receiptNum is : ' + receiptNum);
 	}, function(error){
 		console.log(error);
 	});
 
-faxService.getFaxResult('1234567890', '016080913460600001',
+faxService.getFaxResult('1234567890', '015081013080700001',
 	function(response){
 		console.log(response);
 	},function(error){
