@@ -48,6 +48,10 @@ var Receivers = [
 		receiveName : '수신자성명',
 		receiveNum : '111222333',
 	},
+  {
+    receiveName : '수신자성명',
+    receiveNum : '111222333',
+  },
 ]
 
 faxService.sendFax('1234567890','07075103710','111222333', '수신자명', FilePaths, '',
@@ -58,6 +62,34 @@ faxService.sendFax('1234567890','07075103710','111222333', '수신자명', FileP
 	});
 
 faxService.sendFax('1234567890','07075103710',Receivers, FilePaths, '',
+	function(receiptNum){
+		console.log('receiptNum is : ' + receiptNum);
+	}, function(error){
+		console.log(error);
+	});
+
+
+var Receivers = [
+	{
+		receiveName : '수신자성명',
+		receiveNum : '111222333',
+	},
+  {
+    receiveName : '수신자성명',
+    receiveNum : '111222333',
+  },
+]
+
+receiptNum = "017021715004200001"
+
+faxService.resendFax('1234567890', receiptNum, '07075103710', '발신자명', '', '', '',
+	function(receiptNum){
+		console.log('receiptNum is : ' + receiptNum);
+	}, function(error){
+		console.log(error);
+	});
+
+faxService.resendFax('1234567890', receiptNum, '07075103710', '발신자명', Receivers, '',
 	function(receiptNum){
 		console.log('receiptNum is : ' + receiptNum);
 	}, function(error){
