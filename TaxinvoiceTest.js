@@ -34,7 +34,7 @@ taxinvoiceService.getChargeInfo('1234567890', 'testkorea',
     console.log(response);
   }, function(result){
     console.log(result);
-  })
+  });
 
 Taxinvoice = {
     writeDate : '20160314',
@@ -433,7 +433,7 @@ taxinvoiceService.delete('1234567890', popbill.MgtKeyType.SELL, '20150810-02', '
     console.log(result);
   })
 
-taxinvoiceService.getInfo('1234567890', popbill.MgtKeyType.SELL, '20160314-01', 'testkorea',
+taxinvoiceService.getInfo('1234567890', popbill.MgtKeyType.SELL, '20160314-01',
   function(response){
     console.log(response)
   },
@@ -443,7 +443,7 @@ taxinvoiceService.getInfo('1234567890', popbill.MgtKeyType.SELL, '20160314-01', 
 
 var MgtKeyList = ['20150810-01', '20150810-02', '20150810-03'];
 
-taxinvoiceService.getInfos('1234567890', popbill.MgtKeyType.SELL, MgtKeyList, 'testkorea',
+taxinvoiceService.getInfos('1234567890', popbill.MgtKeyType.SELL, MgtKeyList,
   function(response){
     console.log(response)
   },
@@ -451,7 +451,7 @@ taxinvoiceService.getInfos('1234567890', popbill.MgtKeyType.SELL, MgtKeyList, 't
     console.log(error);
   });
 
-taxinvoiceService.getDetailInfo('1234567890', popbill.MgtKeyType.SELL, '20150810-03', 'testkorea',
+taxinvoiceService.getDetailInfo('1234567890', popbill.MgtKeyType.SELL, '20150810-03',
   function(response){
     console.log(response)
   },
@@ -459,7 +459,7 @@ taxinvoiceService.getDetailInfo('1234567890', popbill.MgtKeyType.SELL, '20150810
     console.log(error);
   });
 
-taxinvoiceService.getLogs('1234567890', popbill.MgtKeyType.SELL, '20150810-03', 'testkorea',
+taxinvoiceService.getLogs('1234567890', popbill.MgtKeyType.SELL, '20150810-03',
   function(response){
     console.log(response)
   },
@@ -595,14 +595,14 @@ taxinvoiceService.cancelIssue('1234567890', popbill.MgtKeyType.SELL, '20150805-1
     console.log(result);
   })
 
-taxinvoiceService.getURL('1234567890', 'SBOX', 'testkorea',
+taxinvoiceService.getURL('1234567890', 'SBOX',
   function(response){
     console.log(response);
   }, function(result){
     console.log(result);
   })
 
-taxinvoiceService.getPopUpURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11', 'testkorea',
+taxinvoiceService.getPopUpURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11',
   function(response){
     console.log(response);
   }, function(result){
@@ -611,35 +611,35 @@ taxinvoiceService.getPopUpURL('1234567890', popbill.MgtKeyType.SELL, '20150810-1
 
 var MgtKeyList = ['20150810-11', '20150810-10']
 
-taxinvoiceService.getPrintURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11', 'testkorea',
+taxinvoiceService.getPrintURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11',
   function(response){
     console.log(response);
   }, function(result){
     console.log(result);
   })
 
-taxinvoiceService.getEPrintURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11', 'testkorea',
+taxinvoiceService.getEPrintURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11',
   function(response){
     console.log(response);
   }, function(result){
     console.log(result);
   })
 
-taxinvoiceService.getMassPrintURL('1234567890', popbill.MgtKeyType.SELL, MgtKeyList, 'testkorea',
+taxinvoiceService.getMassPrintURL('1234567890', popbill.MgtKeyType.SELL, MgtKeyList,
   function(response){
     console.log(response);
   }, function(result){
     console.log(result);
   })
 
-taxinvoiceService.getMailURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11', 'testkorea',
+taxinvoiceService.getMailURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11',
   function(response){
     console.log(response);
   }, function(result){
     console.log(result);
   })
 
-taxinvoiceService.getEmailPublicKeys('1234567890', 'testkorea',
+taxinvoiceService.getEmailPublicKeys('1234567890',
   function(response){
     console.log(response);
   }, function(result){
