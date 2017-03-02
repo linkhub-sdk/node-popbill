@@ -180,12 +180,12 @@ taxinvoiceService.updateContact('1234567890', 'testkorea', contactInfo,
 );
 
 var newContactInfo =  {
-  id : 'testkorea0308',
+  id : 'testkorea0304',
   pwd : 'popbill',
   personName : '담당자명0309',
   tel : '070-7510-3710',
   hp : '010-1234-1234',
-  email : 'code@linkhub.co.kr',
+  email : 'frenchofkiss@gmail.com',
   fax : '070-1234-1234',
   searchAllAllowYN : true,
   mgrYN : true
@@ -208,14 +208,14 @@ taxinvoiceService.getCorpInfo('1234567890',
 );
 
 var corpInfo = {
-  ceoname : "대표자성명0308",
+  ceoname : "대표자성명0303",
   corpName : "업체명",
-  addr : "서구 천변좌로",
+  addr : "영동대로 517",
   bizType : "업태",
   bizClass : "종목"
 };
 
-taxinvoiceService.updateCorpInfo('1234567890','testkorea',corpInfo,
+taxinvoiceService.updateCorpInfo('1234567890',corpInfo,
   function(result){
     console.log(result);
   }, function(error){
@@ -248,10 +248,12 @@ taxinvoiceService.getUnitCost('1234567890',
 	console.log(error);
 });
 
-taxinvoiceService.getPopbillURL('1234567890','userid','CERT',
+taxinvoiceService.getPopbillURL('1234567890','CERT',
   function(url){
     console.log('url is : '  +  url);
-});
+  }, function(error){
+    console.log(error);
+  });
 
 
 taxinvoiceService.checkIsMember('1234567890',
