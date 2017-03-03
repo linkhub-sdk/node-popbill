@@ -11,11 +11,12 @@ popbill.config({
 
 var messageService = popbill.MessageService();
 
-messageService.getChargeInfo('1234567890', popbill.MessageType.MMS, '',
+messageService.getChargeInfo('1234567890', popbill.MessageType.SMS, 'testkorea',
   function(response){
     console.log(response);
+}, function(response){
+    console.log(response);
 });
-
 
 messageService.getAutoDenyList('1234567890',
   function(response){
@@ -47,7 +48,7 @@ messageService.getUnitCost('1234567890',popbill.MessageType.MMS,
 });
 
 
-messageService.getURL('1234567890','BOX','testkorea',
+messageService.getURL('1234567890','BOX',
   function(UnitCost){
     console.log(UnitCost);
   },function(error){
