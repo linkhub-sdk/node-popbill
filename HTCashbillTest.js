@@ -17,7 +17,6 @@ htCashbillService.getChargeInfo('1234567890', 'testkorea',
   }, function(error){
     console.log(error);
   });
-
 KeyType = popbill.MgtKeyType.SELL;
 
 htCashbillService.requestJob('1234567890', KeyType, '20160601', '20160831',
@@ -61,14 +60,14 @@ htCashbillService.summary('1234567890', '016072114000000007', TradeType, TradeUs
     console.log(error);
 });
 
-htCashbillService.getFlatRatePopUpURL('1234567890', 'testkorea',
+htCashbillService.getFlatRatePopUpURL('1234567890',
   function(response){
     console.log(response);
   }, function(error){
     console.log(error);
 });
 
-htCashbillService.getCertificatePopUpURL('1234567890', 'testkorea',
+htCashbillService.getCertificatePopUpURL('1234567890',
   function(response){
     console.log(response);
   }, function(error){
