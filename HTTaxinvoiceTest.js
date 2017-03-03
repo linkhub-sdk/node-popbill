@@ -80,21 +80,21 @@ htTaxinvoiceService.getXML('1234567890', ntsconfirmNum, 'testkorea',
     console.log(error);
 });
 
-htTaxinvoiceService.getFlatRatePopUpURL('1234567890', 'testkorea',
+htTaxinvoiceService.getFlatRatePopUpURL('1234567890',
   function(response){
     console.log(response);
   }, function(error){
     console.log(error);
 });
 
-htTaxinvoiceService.getCertificatePopUpURL('1234567890', 'testkorea',
+htTaxinvoiceService.getCertificatePopUpURL('1234567890',
   function(response){
     console.log(response);
   }, function(error){
     console.log(error);
 });
 
-htTaxinvoiceService.getFlatRateState('1234567890', 'testkorea',
+htTaxinvoiceService.getFlatRateState('1234567890',
   function(response){
     console.log(response);
   }, function(error){
