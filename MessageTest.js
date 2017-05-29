@@ -171,3 +171,10 @@ messageService.cancelReserve('1234567890', '015081013000000006',
 	}, function(error){
 		console.log(error);
 	});
+
+messageService.getSenderNumberList('1234567890',
+  function(response){
+    console.log(response);
+  },function(error){
+	console.log(error);
+});
