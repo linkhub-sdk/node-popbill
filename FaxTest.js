@@ -53,20 +53,20 @@ for(var i=0; i<2; i++){
 var Receivers = [
 	{
 		receiveName : '수신자성명',
-		receiveNum : '111222333',
+		receiveNum : '07043042991',
 	},
   {
     receiveName : '수신자성명',
-    receiveNum : '111222333',
+    receiveNum : '07043042991',
   },
 ]
 
-faxService.sendFax('1234567890','07075103710','111222333', '수신자명', FilePaths, '',
+faxService.sendFax('1234567890','07043042991','07043042991', '수신자명', FilePaths, '', '발신자명', true,
 	function(receiptNum){
 		console.log('receiptNum is : ' + receiptNum);
 	}, function(error){
 		console.log(error);
-	});
+});
 
 faxService.sendFax('1234567890','07075103710',Receivers, FilePaths, '',
 	function(receiptNum){
