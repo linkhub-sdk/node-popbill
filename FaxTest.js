@@ -61,7 +61,7 @@ var Receivers = [
   },
 ]
 
-faxService.sendFax('1234567890','07043042991','07043042991', '수신자명', FilePaths, '', '발신자명', true,
+faxService.sendFax('1234567890','07043042991','070111222', '수신자명', FilePaths, '', '발신자명', true, '팩스전송제목',
 	function(receiptNum){
 		console.log('receiptNum is : ' + receiptNum);
 	}, function(error){
@@ -87,9 +87,9 @@ var Receivers = [
   },
 ]
 
-receiptNum = "017021715004200001"
+receiptNum = "017071815093700001"
 
-faxService.resendFax('1234567890', receiptNum, '07075103710', '발신자명', '', '', '',
+faxService.resendFax('1234567890', receiptNum, '', '발신자명', '', '', '', '팩스재전송 제목',
 	function(receiptNum){
 		console.log('receiptNum is : ' + receiptNum);
 	}, function(error){

@@ -33,12 +33,14 @@ cashbillService.search('1234567890','T', '20160701', '20160831', State, TradeTyp
 
 
 var cashbill = {
-	mgtKey : '20170303-01',
+	mgtKey : '20170718-11',
 	tradeType : '승인거래',
 	tradeUsage : '소득공제용',
 	taxationType : '과세',
 
-	identityNum : '0100001234',
+	identityNum : '0101112222',
+  orgConfirmNum : '820116333',
+  orgTradeDate : '20170710',
 
 	franchiseCorpNum : '1234567890',
 	franchiseCorpName : '발행자 상호_수정',
@@ -54,10 +56,10 @@ var cashbill = {
 	hp : '000111222',
 	fax : '07075103710',
 
-	supplyCost : '15000',
-	tax : '5000',
+	supplyCost : '10000',
+	tax : '1000',
 	serviceFee : '0',
-	totalAmount : '20000',
+	totalAmount : '11000',
 };
 
 cashbillService.registIssue('1234567890',cashbill, "즉시발행 메모",
@@ -309,11 +311,11 @@ cashbillService.getMailURL('1234567890', '20170303-01',
 		console.log(response);
 	}, function(error){
 		console.log(error);
-	})
+	});
 
 cashbillService.getPopUpURL('1234567890', '20170303-01',
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
-	})
+	});
