@@ -11,35 +11,35 @@ popbill.config({
 
 var closedownService = popbill.ClosedownService();
 
-closedownService.getChargeInfo('1234567890', 'testkorea',
+// closedownService.getChargeInfo('1234567890', 'testkorea',
+// 	function(response){
+// 		console.log(response);
+// 	}, function(error){
+// 		console.log(error);
+// 	})
+//
+// closedownService.getUnitCost('1234567890',
+// 	function(response){
+// 		console.log('Unitcost : ' + response);
+// 	}, function(error){
+// 		console.log(error);
+// 	})
+//
+// closedownService.getBalance('1234567890',
+// 	function(response){
+// 		console.log('Balance : ' + response);
+// 	}, function(error){
+// 		console.log(error);
+// 	})
+
+closedownService.checkCorpNum('1234567890','401-03-94930',
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
 	})
 
-closedownService.getUnitCost('1234567890',
-	function(response){
-		console.log('Unitcost : ' + response);
-	}, function(error){
-		console.log(error);
-	})
-
-closedownService.getBalance('1234567890',
-	function(response){
-		console.log('Balance : ' + response);
-	}, function(error){
-		console.log(error);
-	})
-
-closedownService.checkCorpNum('1234567890','4108600477',
-	function(response){
-		console.log(response);
-	}, function(error){
-		console.log(error);
-	})
-
-var CorpNumList = ['1234567890','4108600477','410-86-21884']
+var CorpNumList = ['1234567890','4108600477','401-03-94930']
 
 closedownService.checkCorpNums('1234567890', CorpNumList,
 	function(response){

@@ -319,3 +319,17 @@ cashbillService.getPopUpURL('1234567890', '20170303-01',
 	}, function(error){
 		console.log(error);
 	});
+
+cashbillService.revokeRegistIssue('1234567890', '20170818-03', '820116333', '20170711',
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	});
+
+cashbillService.revokeRegister('1234567890', '20170818-06', '820116333', '20170711',
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	});
