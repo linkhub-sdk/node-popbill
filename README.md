@@ -1,5 +1,5 @@
 # node-popbill
-팝빌 node.js SDK v1.4.0
+팝빌 node.js SDK v1.5.0
 
 ## Install
 
