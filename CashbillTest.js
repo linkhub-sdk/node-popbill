@@ -75,7 +75,6 @@ cashbillService.getBalance('1234567890',
   }
 );
 
-PBOX(매출), TBOX(임시), WRITE(현금영수증 작성)
 cashbillService.getURL('1234567890','WRITE', 'testkorea',
 	function(response){
 		console.log(response);
@@ -320,16 +319,16 @@ cashbillService.getPopUpURL('1234567890', '20170303-01',
 		console.log(error);
 	});
 
-cashbillService.revokeRegistIssue('1234567890', '20170818-03', '820116333', '20170711',
+cashbillService.revokeRegistIssue('1234567890', '20171113-47', '664483163', '20171113', false, '', 'testkorea', true, '1', '3000', '0', '0', '3000',
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
 	});
 
-cashbillService.revokeRegister('1234567890', '20170818-06', '820116333', '20170711',
+cashbillService.revokeRegister('1234567890', '20171113-42', '820116333', '20170711', false, '', true, '1', '3000', '300', '0', '3300',
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
-	});
+});
