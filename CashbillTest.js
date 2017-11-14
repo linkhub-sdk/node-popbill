@@ -254,7 +254,7 @@ cashbillService.sendFAX('1234567890', '20150810-01', '07075103710', '000111222',
 		console.log(error);
 	});
 
-cashbillService.getDetailInfo('1234567890', '20170303-01',
+cashbillService.getDetailInfo('1234567890', '20171114-20',
 	function(response){
 		console.log(response);
 	}, function(error){
@@ -319,14 +319,14 @@ cashbillService.getPopUpURL('1234567890', '20170303-01',
 		console.log(error);
 	});
 
-cashbillService.revokeRegistIssue('1234567890', '20171114-13', '806100322', '20171113', false, '', 'testkorea',
+cashbillService.revokeRegistIssue('1234567890', '20171114-20', '806100322', '20171113', false, '', 'testkorea', true, 1, '3300', '300', '0', '3600',
 	function(response){
 		console.log(response);
 	}, function(error){
 		console.log(error);
 	});
 
-cashbillService.revokeRegister('1234567890', '20171113-42', '820116333', '20170711', false, '', true, '1', '3000', '300', '0', '3300',
+cashbillService.revokeRegister('1234567890', '20171114-19', '820116333', '20170711', false, 'testkorea', true, 1, '3300', '300', '0', '3600',
 	function(response){
 		console.log(response);
 	}, function(error){
