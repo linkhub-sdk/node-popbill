@@ -319,7 +319,7 @@ cashbillService.getPopUpURL('1234567890', '20170303-01',
 		console.log(error);
 	});
 
-cashbillService.revokeRegistIssue('1234567890', '20171113-47', '664483163', '20171113', false, '', 'testkorea', true, '1', '3000', '0', '0', '3000',
+cashbillService.revokeRegistIssue('1234567890', '20171114-13', '806100322', '20171113', false, '', 'testkorea',
 	function(response){
 		console.log(response);
 	}, function(error){
