@@ -254,7 +254,7 @@ cashbillService.sendFAX('1234567890', '20150810-01', '07075103710', '000111222',
 		console.log(error);
 	});
 
-cashbillService.getDetailInfo('1234567890', '20171114-20',
+cashbillService.getDetailInfo('1234567890', '20171113-13',
 	function(response){
 		console.log(response);
 	}, function(error){

@@ -11,11 +11,12 @@ popbill.config({
 
 var taxinvoiceService = popbill.TaxinvoiceService();
 
-SDate = '20160701';
-EDate = '20160831';
+SDate = '20171101';
+EDate = '20171231';
 State = ['3**','6**'];
 Type = ['N', 'M'];
 TaxType = ['T','N','Z'];
+IssueType = ['N','R','T'];
 LateOnly = null;
 PageNum = 1
 PerPage = 5
@@ -23,11 +24,11 @@ TaxRegIDType = 'S'
 TaxRegIDYN = '';
 TaxRegID = '';
 QString = '';
-InterOPYN = '0';
+InterOPYN = '';
 
-taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate, State, Type, TaxType, LateOnly, 'D', PageNum, PerPage, TaxRegIDType, TaxRegIDYN, TaxRegID, QString, InterOPYN, 'testkorea',
+taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate, State, Type, TaxType, LateOnly, 'D', PageNum, PerPage, TaxRegIDType, TaxRegIDYN, TaxRegID, QString, InterOPYN, 'testkorea', IssueType,
   function(response){
-    console.log(response);
+    console.log(response.total);
   }, function(error){
     console.log(error);
 });
