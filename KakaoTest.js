@@ -14,8 +14,13 @@ var kakaoService = popbill.KakaoService();
 kakaoService.getURL('1234567890', 'SENDER', 'testkorea',
     function (url) {
         console.log(url);
-    }, function () {
-        console.log();
+    });
+
+kakaoService.listPlusFriendID('1234567890',
+    function (response) {
+        console.log(response)
+    }, function (response) {
+        console.log(response)
     });
 
 kakaoService.listPlusFriendID('1234567890', 'testkorea',
@@ -25,7 +30,21 @@ kakaoService.listPlusFriendID('1234567890', 'testkorea',
         console.log(response)
     });
 
+kakaoService.getSenderNumberList('1234567890',
+    function (response) {
+        console.log(response)
+    }, function (response) {
+        console.log(response)
+    });
+
 kakaoService.getSenderNumberList('1234567890', 'testkorea',
+    function (response) {
+        console.log(response)
+    }, function (response) {
+        console.log(response)
+    });
+
+kakaoService.listATSTemplate('1234567890',
     function (response) {
         console.log(response)
     }, function (response) {
@@ -52,7 +71,7 @@ var kakaoReceiver_same = [
 
 var kakaoReceiver_multi = [
     {
-        rcv: '01083490706',
+        rcv: '010123890',
         rcvnm: 'jetty',
         msg: '테스트 템플릿 입니다.',
         altmsg: '알림톡 대체 문자_0'
@@ -118,7 +137,7 @@ kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042993', kakaoReceiver
 
 var FilePath = ['./test.jpg'];
 
-kakaoService.sendFMS_one('1234567890', '@팝빌', '07043042993', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", "01083490706", "popbill", "20180408001230", "http://linkhub.co.kr", FilePath, btns,
+kakaoService.sendFMS_one('1234567890', '@팝빌', '07043042993', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", "010123890", "popbill", "20180408001230", "http://linkhub.co.kr", FilePath, btns,
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
@@ -146,12 +165,27 @@ kakaoService.getMessages('1234567890', '018040311144300002',
         console.log(error);
     });
 
+kakaoService.getMessages('1234567890', '018040311144300002', 'testkorea',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error);
+    });
+
 kakaoService.cancelReserve('1234567890', '018040311145500001',
     function (response) {
         console.log(response);
     }, function (error) {
         console.log(error);
     });
+
+kakaoService.cancelReserve('1234567890', '018040311145500001', 'testkorea',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error);
+    });
+
 
 State = [0, 1, 2, 3, 4, 5];
 Item = ['ATS', 'FTS', 'FMS'];
@@ -165,9 +199,34 @@ kakaoService.search('1234567890', '20180301', '20180327', State, Item, '', Sende
         console.log(err);
     });
 
-kakaoService.getUnitCost('1234567890', popbill.KakaoType.ATS,
+kakaoService.search('1234567890', '20180301', '20180327', State, Item, '', SenderYN, 1, 10, Order, 'testkorea',
+    function (Response) {
+        console.log(Response);
+    }, function (err) {
+        console.log(err);
+    });
+
+
+kakaoService.getUnitCost('1234567890', popbill.KakaoType.FTS,
     function (UnitCost) {
         console.log('UnitCost is : ' + UnitCost);
+    }, function (err) {
+        console.log(err);
+    });
+
+
+kakaoService.getUnitCost('1234567890', popbill.KakaoType.FMS, 'testkorea',
+    function (UnitCost) {
+        console.log('UnitCost is : ' + UnitCost);
+    }, function (err) {
+        console.log(err);
+    });
+
+kakaoService.getChargeInfo('1234567890', popbill.KakaoType.ATS,
+    function (response) {
+        console.log(response);
+    }, function (response) {
+        console.log(response);
     });
 
 kakaoService.getChargeInfo('1234567890', popbill.KakaoType.ATS, 'testkorea',
