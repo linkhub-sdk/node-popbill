@@ -1,21 +1,28 @@
 {
   "name": "popbill",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Popbill API SDK for node. see www.popbill.com",
   "author": "Kim Seongjun <pallet027@gmail.com>",
-  "contributors": [{
-    "name": "Kim Seongjun",
-    "email": "pallet027@gmail.com"
-  },{
-    "name":"JeongYohan",
-    "email":"code@linkhub.co.kr"
-  }],
+  "contributors": [
+    {
+      "name": "Kim Seongjun",
+      "email": "pallet027@gmail.com"
+    },
+    {
+      "name": "JeongYohan",
+      "email": "code@linkhub.co.kr"
+    },
+    {
+      "name": "HyunJin Kim",
+      "email": "hjkim@linkhub.co.kr"
+    }
+  ],
   "main": "index.js",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "dependencies" : {
-    "linkhub" : "1.1.0"
+  "dependencies": {
+    "linkhub": "1.1.0"
   },
   "repository": {
     "type": "git",
@@ -32,6 +39,7 @@
     "closedown",
     "hometax",
     "SMS",
+    "KakaoTalk",
     "FAX",
     "api",
     "sdk"

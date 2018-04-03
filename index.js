@@ -2,74 +2,84 @@ var TaxinvoiceService = require('./lib/TaxinvoiceService');
 var StatementService = require('./lib/StatementService');
 var CashbillService = require('./lib/CashbillService');
 var MessageService = require('./lib/MessageService');
+var KakaoService = require('./lib/KakaoService');
 var FaxService = require('./lib/FaxService');
 var HTTaxinvoiceService = require('./lib/HTTaxinvoiceService');
 var HTCashbillService = require('./lib/HTCashbillService');
 var ClosedownService = require('./lib/ClosedownService');
 var linkhub = require('linkhub');
 
-var configuration = {LinkID : '',SecretKey : '',IsTest : false};
+var configuration = {LinkID: '', SecretKey: '', IsTest: false};
 
-exports.config = function(config) {
-	configuration = config;
+exports.config = function (config) {
+    configuration = config;
 }
 
-exports.MgtKeyType = {SELL:'SELL', BUY:'BUY', TRUSTEE:'TRUSTEE'};
+exports.MgtKeyType = {SELL: 'SELL', BUY: 'BUY', TRUSTEE: 'TRUSTEE'};
 
-exports.TaxinvoiceService = function() {
-  if(!this._TaxinvoiceService) {
-    this._TaxinvoiceService = new TaxinvoiceService(configuration);
-  }
-  return this._TaxinvoiceService;
+exports.TaxinvoiceService = function () {
+    if (!this._TaxinvoiceService) {
+        this._TaxinvoiceService = new TaxinvoiceService(configuration);
+    }
+    return this._TaxinvoiceService;
 }
 
-exports.StatementService = function(){
-  if(!this._StatementService){
-    this._StatementService = new StatementService(configuration);
-  }
-  return this._StatementService;
+exports.StatementService = function () {
+    if (!this._StatementService) {
+        this._StatementService = new StatementService(configuration);
+    }
+    return this._StatementService;
 }
 
-exports.CashbillService = function() {
-  if(!this._CashbillService) {
-    this._CashbillService = new CashbillService(configuration);
-  }
-  return this._CashbillService;
+exports.CashbillService = function () {
+    if (!this._CashbillService) {
+        this._CashbillService = new CashbillService(configuration);
+    }
+    return this._CashbillService;
 }
 
-exports.MessageType = {SMS : 'SMS', LMS : 'LMS', MMS : 'MMS'};
+exports.MessageType = {SMS: 'SMS', LMS: 'LMS', MMS: 'MMS'};
 
-exports.MessageService = function() {
-  if(!this._MessageService) {
-    this._MessageService = new MessageService(configuration);
-  }
-  return this._MessageService;
+exports.MessageService = function () {
+    if (!this._MessageService) {
+        this._MessageService = new MessageService(configuration);
+    }
+    return this._MessageService;
 }
 
-exports.FaxService = function() {
-  if(!this._FaxService) {
-    this._FaxService = new FaxService(configuration);
-  }
-  return this._FaxService;
+exports.KakaoType = {ATS: 'ATS', FTS: 'FTS', FMS: 'FMS'};
+
+exports.KakaoService = function () {
+    if (!this._KakaoService) {
+        this._KakaoService = new KakaoService(configuration);
+    }
+    return this._KakaoService;
 }
 
-exports.HTTaxinvoiceService = function() {
-  if(!this._HTTaxinvoiceService) {
-    this._HTTaxinvoiceService = new HTTaxinvoiceService(configuration);
-  }
-  return this._HTTaxinvoiceService;
+exports.FaxService = function () {
+    if (!this._FaxService) {
+        this._FaxService = new FaxService(configuration);
+    }
+    return this._FaxService;
 }
 
-exports.HTCashbillService = function() {
-  if(!this._HTCashbillService) {
-    this._HTCashbillService = new HTCashbillService(configuration);
-  }
-  return this._HTCashbillService;
+exports.HTTaxinvoiceService = function () {
+    if (!this._HTTaxinvoiceService) {
+        this._HTTaxinvoiceService = new HTTaxinvoiceService(configuration);
+    }
+    return this._HTTaxinvoiceService;
 }
 
-exports.ClosedownService = function() {
-  if(!this._ClosedownService) {
-    this._ClosedownService = new ClosedownService(configuration);
-  }
-  return this._ClosedownService;
+exports.HTCashbillService = function () {
+    if (!this._HTCashbillService) {
+        this._HTCashbillService = new HTCashbillService(configuration);
+    }
+    return this._HTCashbillService;
+}
+
+exports.ClosedownService = function () {
+    if (!this._ClosedownService) {
+        this._ClosedownService = new ClosedownService(configuration);
+    }
+    return this._ClosedownService;
 }
