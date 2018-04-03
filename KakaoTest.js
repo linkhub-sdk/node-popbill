@@ -107,7 +107,7 @@ kakaoService.sendATS_same('1234567890', '018020000002', '070-4304-2993', '테스
         console.log(err);
     });
 
-kakaoService.sendATS_multi('1234567890', '018020000002', '070-4304-2993', kakaoReceiver_multi, "A", "", "testkorea",
+kakaoService.sendATS_multi('1234567890', '018020000002', '070-4304-2993', "", "", "A", "", kakaoReceiver_multi, "testkorea",
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
@@ -121,14 +121,14 @@ kakaoService.sendFTS_one('1234567890', '@팝빌', '07043042993', '친구톡 입�
         console.log(err);
     });
 
-kakaoService.sendFTS_same('1234567890', '@팝빌', '07043042993', '친구톡 입니다', '대체문자 입니다.', 'A' , '', kakaoReceiver_same, '', btns, 'testkorea',
+kakaoService.sendFTS_same('1234567890', '@팝빌', '07043042993', '친구톡 입니다', '대체문자 입니다.', 'A' , '',  '', kakaoReceiver_same, btns, 'testkorea',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042993', kakaoReceiver_multi, 'A' , '', '', btns, 'testkorea',
+kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042993', '', '', 'A' , '', '', kakaoReceiver_multi, btns, 'testkorea',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
@@ -137,28 +137,28 @@ kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042993', kakaoReceiver
 
 var FilePath = ['./test.jpg'];
 
-kakaoService.sendFMS_one('1234567890', '@팝빌', '07043042993', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", "010123890", "popbill", "20180408001230", "http://linkhub.co.kr", FilePath, btns,
+kakaoService.sendFMS_one('1234567890', '@팝빌', '07043042993', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", "010123890", "popbill", "", "http://linkhub.co.kr", FilePath, btns, "testkorea",
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFMS_same('1234567890', '@팝빌', '07043042993', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", kakaoReceiver_same, "", "http://linkhub.co.kr", FilePath, btns, 'testkorea',
+kakaoService.sendFMS_same('1234567890', '@팝빌', '07043042993', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", "", "http://linkhub.co.kr", FilePath, kakaoReceiver_same, btns, 'testkorea',
+    function (receiptNum) {
+        console.log("receiptNum is :" + receiptNum);
+    }, function (err) {
+        console.log(err);
+    });
+//
+kakaoService.sendFMS_multi('1234567890', '@팝빌', '07043042993', "", "", 'A', "", "", "http://linkhub.co.kr", FilePath, kakaoReceiver_multi, btns, 'testkorea',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFMS_multi('1234567890', '@팝빌', '07043042993', kakaoReceiver_multi, 'A', "", "", "http://linkhub.co.kr", FilePath, btns, 'testkorea',
-    function (receiptNum) {
-        console.log("receiptNum is :" + receiptNum);
-    }, function (err) {
-        console.log(err);
-    });
-
-kakaoService.getMessages('1234567890', '018040311144300002',
+kakaoService.getMessages('1234567890', '018040316590600001',
     function (response) {
         console.log(response);
     }, function (error) {
