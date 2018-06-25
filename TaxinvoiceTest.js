@@ -297,14 +297,14 @@ taxinvoiceService.joinMember(joinInfo,
 });
 
  var Taxinvoice = {
-    writeDate : '20160314',
+    writeDate : '20170625',
     chargeDirection : '정과금',
     issueType : '정발행',
     purposeType : '영수',
     issueTiming : '직접발행',
     taxType : '과세',
     invoicerCorpNum : '1234567890',
-    invoicerMgtKey : '20160314-25',
+    invoicerMgtKey : '20180625005',
     invoicerTaxRegID : '1234',
     invoicerCorpName : '공급자 상호',
     invoicerCEOName : '대표자 성명',
@@ -542,6 +542,13 @@ taxinvoiceService.issue('1234567890', popbill.MgtKeyType.SELL, '20150810-10', '�
   })
 
 taxinvoiceService.issue('1234567890', popbill.MgtKeyType.SELL, '20150810-11','발행메모', 'testkorea',
+  function(response){
+    console.log(response);
+  }, function(result){
+    console.log(result);
+  })
+
+taxinvoiceService.issue('1234567890', popbill.MgtKeyType.SELL, '20180625005', 'memo', '이메일제목', true, 'testkorea',
   function(response){
     console.log(response);
   }, function(result){
