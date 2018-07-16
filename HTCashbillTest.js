@@ -87,3 +87,41 @@ htCashbillService.getCertificateExpireDate('1234567890', 'testkorea',
   }, function(error){
     console.log(error);
 });
+
+htCashbillService.checkCertValidation('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+
+htCashbillService.checkDeptUser('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+
+htCashbillService.registDeptUser('1234567890', 'test1234','test1234!',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+
+
+htCashbillService.checkLoginDeptUser('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+
+
+
+htCashbillService.deleteDeptUser('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });

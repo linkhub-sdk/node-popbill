@@ -656,3 +656,11 @@ taxinvoiceService.getPartnerURL('1234567890','CHRG',
   }, function(error){
     console.log(error);
   });
+
+
+taxinvoiceService.checkCertValidation('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });

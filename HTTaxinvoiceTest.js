@@ -107,3 +107,38 @@ htTaxinvoiceService.getCertificateExpireDate('1234567890', 'testkorea',
   }, function(error){
     console.log(error);
 });
+
+
+htTaxinvoiceService.checkCertValidation('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+
+htTaxinvoiceService.checkDeptUser('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+htTaxinvoiceService.registDeptUser('1234567890', 'test1234','test1234!',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+
+htTaxinvoiceService.checkLoginDeptUser('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
+
+htTaxinvoiceService.deleteDeptUser('1234567890',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+  });
