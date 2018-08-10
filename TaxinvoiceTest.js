@@ -664,3 +664,25 @@ taxinvoiceService.checkCertValidation('1234567890',
   }, function(error){
     console.log(error);
   });
+
+taxinvoiceService.assignMgtKey('1234567890', popbill.MgtKeyType.SELL, '018081010174100001', '20180810', '',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error)
+    });
+
+
+taxinvoiceService.listEmailConfig('1234567890',
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    });
+
+taxinvoiceService.updateEmailConfig('1234567890', "TAX_ACCEPT", false, "",
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    });
