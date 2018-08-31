@@ -171,6 +171,18 @@ kakaoService.getMessages('1234567890', '018040409545300004', 'testkorea',
     }, function (error) {
         console.log(error);
     });
+kakaoService.getMessagesRN('1234567890', '20180830100648',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error);
+    });
+kakaoService.getMessagesRN('1234567890', '20180830100354', 'testkorea',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error);
+    });
 
 kakaoService.cancelReserve('1234567890', '018040311145500001',
     function (response) {
@@ -186,6 +198,20 @@ kakaoService.cancelReserve('1234567890', '018040410511300001', 'testkorea',
         console.log(error);
     });
 
+
+kakaoService.cancelReserveRN('1234567890', '20180830101323',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error);
+    });
+
+kakaoService.cancelReserveRN('1234567890', '20180830101323', 'testkorea',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error);
+    });
 
 State = [0, 1, 2, 3, 4, 5];
 Item = ['ATS', 'FTS', 'FMS'];

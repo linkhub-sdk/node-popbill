@@ -11,7 +11,7 @@ popbill.config({
 
 var faxService = popbill.FaxService();
 
-faxService.getURL('1234567890','BOX',
+faxService.getURL('1234567890','BOX', 'testkorea',
   function(URL){
     console.log(URL);
   },function(error){
@@ -116,6 +116,21 @@ faxService.cancelReserve('1234567890', '015081013071300001',
 	}, function(error){
 		console.log(error);
 	})
+
+faxService.getFaxResultRN('1234567890', '20180831',
+    function(response){
+        console.log(response);
+    },function(error){
+        console.log(error);
+    });
+
+faxService.cancelReserveRN('1234567890', '20180831', 'testkorea',
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    })
+
 
 faxService.getSenderNumberList('1234567890',
   function(response){
