@@ -68,7 +68,7 @@ var kakaoReceiver_same = [
         rcvnm: '동보_tomcat'
     }
 ];
-//
+
 var kakaoReceiver_multi = [
     {
         rcv: '010111222',
@@ -93,42 +93,45 @@ var btns = [
     }
 ];
 
-kakaoService.sendATS_one('1234567890', '018020000002', '070-4304-2993', '테스트 템플릿 입니다.', "알림톡 대체 문자", "A", "", "010111222", "partner", 'unusualID',
+ATS
+kakaoService.sendATS_one('1234567890', '018080000079', '070-4304-2992', '테스트 템플릿 입니다.', "알림톡 대체 문자", "A", "", "010111222", "partner", 'testkorea', "20180903144355",
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendATS_same('1234567890', '018020000002', '070-4304-2993', '테스트 템플릿 입니다.', "알림톡 대체 문자", "", "", kakaoReceiver_same, 'asd',
+kakaoService.sendATS_same('1234567890', '018080000079', '070-4304-2992', '테스트 템플릿 입니다.', "알림톡 대체 문자", "", "", kakaoReceiver_same, 'testkorea', '20180903144524',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendATS_multi('1234567890', '018020000002', '070-4304-2993', "C", "", kakaoReceiver_multi, "testkorea",
+kakaoService.sendATS_multi('1234567890', '018080000079', '070-4304-2992', "C", "", kakaoReceiver_multi, "testkorea", '20180903144525',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFTS_one('1234567890', '@팝빌', '07043042993', '친구톡 입니다', '대체문자 입니다', 'A', '', '010111222', 'partner', '', btns,
+
+
+kakaoService.sendFTS_one('1234567890', '@팝빌', '07043042992', '친구톡 입니다', '대체문자 입니다', 'A', '', '010111222', 'partner', '', btns, 'testkorea', '20180903144520',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFTS_same('1234567890', '@팝빌', '07043042993', '친구톡 동보 입니다', '대체문자 입니다.', 'A' , '',  '', kakaoReceiver_same, btns,
+kakaoService.sendFTS_same('1234567890', '@팝빌', '07043042992', '친구톡 동보 입니다', '대체문자 입니다.', 'A' , '',  '', kakaoReceiver_same, btns, 'testkorea', '20180903144521',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042993', 'A' , '', '', kakaoReceiver_multi, btns, 'testkorea',
+kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042992', 'A' , '', '', kakaoReceiver_multi, btns, 'testkorea', '20180903144522',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
@@ -137,21 +140,21 @@ kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042993', 'A' , '', '',
 
 var FilePath = ['./test.jpg'];
 
-kakaoService.sendFMS_one('1234567890', '@팝빌', '07043042993', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", "010111222", "popbill", "", "http://linkhub.co.kr", FilePath, btns,
+kakaoService.sendFMS_one('1234567890', '@팝빌', '07043042992', '친구톡 이미지 입니다', '대체문자 입니다', 'A', "", "010111222", "popbill", "", "http://linkhub.co.kr", FilePath, btns, 'testkorea', '20180903',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFMS_same('1234567890', '@팝빌', '07043042993', '친구톡 이미지 동보 입니다', '대체문자 입니다', 'A', "", "", "http://linkhub.co.kr", FilePath, kakaoReceiver_same, btns, 'testkorea',
+kakaoService.sendFMS_same('1234567890', '@팝빌', '07043042992', '친구톡 이미지 동보 입니다', '대체문자 입니다', 'A', "", "", "http://linkhub.co.kr", FilePath, kakaoReceiver_same, btns, 'testkorea','20180903145106',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendFMS_multi('1234567890', '@팝빌', '07043042993', 'A', "20180409001200", "", "http://linkhub.co.kr", FilePath, kakaoReceiver_multi, btns, 'testkorea',
+kakaoService.sendFMS_multi('1234567890', '@팝빌', '07043042992', 'A', "20180409001200", "", "http://linkhub.co.kr", FilePath, kakaoReceiver_multi, btns, 'testkorea','20180903145107',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
@@ -171,27 +174,27 @@ kakaoService.getMessages('1234567890', '018040409545300004', 'testkorea',
     }, function (error) {
         console.log(error);
     });
-kakaoService.getMessagesRN('1234567890', '20180830100648',
+kakaoService.getMessagesRN('1234567890', '20180903144355',
     function (response) {
         console.log(response);
     }, function (error) {
         console.log(error);
     });
-kakaoService.getMessagesRN('1234567890', '20180830100354', 'testkorea',
-    function (response) {
-        console.log(response);
-    }, function (error) {
-        console.log(error);
-    });
-
-kakaoService.cancelReserve('1234567890', '018040311145500001',
+kakaoService.getMessagesRN('1234567890', '20180903144355', 'testkorea',
     function (response) {
         console.log(response);
     }, function (error) {
         console.log(error);
     });
 
-kakaoService.cancelReserve('1234567890', '018040410511300001', 'testkorea',
+kakaoService.cancelReserve('1234567890', '018090314525300001',
+    function (response) {
+        console.log(response);
+    }, function (error) {
+        console.log(error);
+    });
+
+kakaoService.cancelReserve('1234567890', '018090314525300001', 'testkorea',
     function (response) {
         console.log(response);
     }, function (error) {
@@ -199,14 +202,14 @@ kakaoService.cancelReserve('1234567890', '018040410511300001', 'testkorea',
     });
 
 
-kakaoService.cancelReserveRN('1234567890', '20180830101323',
+kakaoService.cancelReserveRN('1234567890', '20180903145106',
     function (response) {
         console.log(response);
     }, function (error) {
         console.log(error);
     });
 
-kakaoService.cancelReserveRN('1234567890', '20180830101323', 'testkorea',
+kakaoService.cancelReserveRN('1234567890', '20180903145106', 'testkorea',
     function (response) {
         console.log(response);
     }, function (error) {

@@ -106,7 +106,7 @@ messageService.sendSMS_multi('1234567890', '07043042992', '동보전송을 하�
 
 
 // requestNum
-messageService.sendSMS_multi('1234567890', '07043042992', '동보전송을 하고싶소.', Messages,'', false, '20180810142432',
+messageService.sendSMS_multi('1234567890', '07043042992', '동보전송을 하고싶소.', Messages, '', false, '20180903141339',
     function(response){
         console.log(response);
     }, function(error){
@@ -115,7 +115,7 @@ messageService.sendSMS_multi('1234567890', '07043042992', '동보전송을 하�
 
 
 // // LMS 단건
-messageService.sendLMS('1234567890', '07043042992', '010111222', '수신자명', '메시지 제목입니닷', 'LMS 단건전송', '20180811161016', true, '발신자명', '20180810161021',
+messageService.sendLMS('1234567890', '07043042992', '010111222', '수신자명', '메시지 제목입니닷', 'LMS 단건전송', '20180811161016', true, '발신자명', '20180903141403',
     function(response){
         console.log(response);
     }, function(error){
@@ -234,7 +234,7 @@ messageService.getMessages('1234567890', '015081013000000005',
     })
 
 
-messageService.getMessagesRN('1234567890', '20180810161021',
+messageService.getMessagesRN('1234567890', '20180903141403',
     function(response){
         console.log(response);
     }, function(error){
