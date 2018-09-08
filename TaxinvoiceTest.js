@@ -665,7 +665,7 @@ taxinvoiceService.checkCertValidation('1234567890',
     console.log(error);
   });
 
-taxinvoiceService.assignMgtKey('1234567890', popbill.MgtKeyType.SELL, '018081010174100001', '20180810', '',
+taxinvoiceService.assignMgtKey('1234567890', popbill.MgtKeyType.SELL, '018090717310100001', '20180908', 'testkorea',
     function (response) {
         console.log(response);
     }, function (error) {
