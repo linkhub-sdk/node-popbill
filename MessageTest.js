@@ -257,18 +257,18 @@ messageService.cancelReserveRN('1234567890', '20180810161021',
         console.log(error);
     });
 
-messageService.getSenderNumberList('1234567890',
+messageService.getSenderNumberList('1234567890', 'testkorea',
     function(response){
         console.log(response);
     },function(error){
-        console.log(error);
+        console.log(error);K
     });
 
 
-var ReciptNumList = ['018041717000000018', '018041717000000019'];
-// var ReciptNumList = [];
+var reciptNumList = ['018041717000000018', '018041717000000019'];
+// var reciptNumList = [];
 
-messageService.getStates('1234567890',  ReciptNumList, "testkorea",
+messageService.getStates('1234567890',  reciptNumList, 'testkorea',
     function(response){
         console.log(response);
     },function(error){
