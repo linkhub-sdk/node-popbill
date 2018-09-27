@@ -29,8 +29,9 @@ State = [1,2,3,4];
 Item = ['SMS','LMS','MMS'];
 ReserveYN = false;
 SenderYN = false;
+Qstring = "상상";
 
-messageService.search('1234567890','20160101','20160310',State,Item,true,true,'D',1,10,
+messageService.search('1234567890','20180927','20180927',State,Item,true,true,'D',1,10, Qstring,
     function(Response){
         console.log(Response);
     }, function(err){
@@ -46,7 +47,6 @@ messageService.getUnitCost('1234567890',popbill.MessageType.MMS,
     function(UnitCost){
         console.log('UnitCost is : '  +  UnitCost);
     });
-
 
 messageService.getURL('1234567890','BOX',
     function(UnitCost){
@@ -226,14 +226,7 @@ messageService.sendMMS_multi('1234567890', '07043042992', '동보제목', '동�
         console.log(error);
     })
 
-messageService.getMessages('1234567890', '015081013000000005',
-    function(response){
-        console.log(response);
-    }, function(error){
-        console.log(error);
-    })
-
-
+var reciptNumList = [];
 messageService.getMessagesRN('1234567890', '20180903141403',
     function(response){
         console.log(response);
@@ -241,6 +234,13 @@ messageService.getMessagesRN('1234567890', '20180903141403',
         console.log(error);
     })
 
+
+messageService.getMessages('1234567890', '015081013000000005',
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    })
 
 messageService.cancelReserve('1234567890', '015081013000000006',
     function(response){
@@ -266,7 +266,6 @@ messageService.getSenderNumberList('1234567890', 'testkorea',
 
 
 var reciptNumList = ['018041717000000018', '018041717000000019'];
-// var reciptNumList = [];
 
 messageService.getStates('1234567890',  reciptNumList, 'testkorea',
     function(response){

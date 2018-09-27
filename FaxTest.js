@@ -26,16 +26,18 @@ faxService.getChargeInfo('1234567890', 'testkorea',
   }
 );
 
+
 State = [ 1, 2, 3, 4 ];
 ReserveYN = false;
 SenderOnly = false;
+QString = "공급받는자 상호";
 
-faxService.search('1234567890', '20160101', '20160311', State, ReserveYN, SenderOnly, 'D', 1, 5,
-	function(response){
-		console.log(response);
-	}, function(error){
-		console.log(error);
-});
+faxService.search('1234567890', '20180901', '20180930', State, ReserveYN, SenderOnly, 'D', 1, 5, QString,
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    });
 
 faxService.getUnitCost('1234567890',
   function(UnitCost){

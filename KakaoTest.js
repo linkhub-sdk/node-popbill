@@ -220,7 +220,7 @@ State = [0, 1, 2, 3, 4, 5];
 Item = ['ATS', 'FTS', 'FMS'];
 SenderYN = false;
 Order = 'D';
-
+QString ='popbill';
 kakaoService.search('1234567890', '20180301', '20180327', State, Item, '', SenderYN, 1, 10, Order,
     function (Response) {
         console.log(Response);
@@ -228,7 +228,7 @@ kakaoService.search('1234567890', '20180301', '20180327', State, Item, '', Sende
         console.log(err);
     });
 
-kakaoService.search('1234567890', '20180301', '20180327', State, Item, '', SenderYN, 1, 10, Order, 'testkorea',
+kakaoService.search('1234567890', '20180901', '20180927', State, Item, '', SenderYN, 1, 10, Order, QString, 'testkorea',
     function (Response) {
         console.log(Response);
     }, function (err) {
