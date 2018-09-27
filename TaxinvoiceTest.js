@@ -680,7 +680,7 @@ taxinvoiceService.listEmailConfig('1234567890',
         console.log(error);
     });
 
-taxinvoiceService.updateEmailConfig('1234567890', "TAX_ISSUE", false, "",
+taxinvoiceService.updateEmailConfig('1234567890', "TAX_ISSUE", "true", "",
     function(response){
         console.log(response);
     }, function(error){
