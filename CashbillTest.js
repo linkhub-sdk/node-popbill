@@ -18,13 +18,14 @@ cashbillService.getChargeInfo('1234567890',
         console.log(error)
     });
 
-State = ['100', '200', '3**', '4**'];
+State = ['1**', '2**', '3**', '4**'];
 TradeType = ['N', 'C'];
 TradeUsage = ['P', 'C'];
 TaxationType = ['T', 'N'];
-QString = '0100001234';
+TradeOpt = ['N', 'B', 'T'];
+QString = '01012345678';
 
-cashbillService.search('1234567890','T', '20160701', '20160831', State, TradeType, TradeUsage, TaxationType, QString, 'D', 1, 30,
+cashbillService.search('1234567890', 'R', '20180901', '20180931', State, TradeType, TradeUsage, TradeOpt, TaxationType, QString, 'D', 1, 50,
     function(response){
         console.log(response);
     }, function(error){
@@ -261,7 +262,7 @@ cashbillService.getDetailInfo('1234567890', '20171113-13',
         console.log(error);
     })
 
-cashbillService.getInfo('1234567890', '20170303-01',
+cashbillService.getInfo('1234567890', '20180926_06',
     function(response){
         console.log(response);
     }, function(error){
