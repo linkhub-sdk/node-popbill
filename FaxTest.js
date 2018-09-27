@@ -39,6 +39,7 @@ faxService.search('1234567890', '20180901', '20180930', State, ReserveYN, Sender
         console.log(error);
     });
 
+
 faxService.getUnitCost('1234567890',
   function(UnitCost){
     console.log('UnitCost is : '  +  UnitCost);
@@ -143,7 +144,7 @@ faxService.resendFaxRN('1234567890', OrgRequestNum, '20180903154412', 'title tes
         console.log(error);
     });
 
-faxService.getFaxResult('1234567890', '015081013080700001',
+faxService.getFaxResult('1234567890', '018092715201400001',
 	function(response){
 		console.log(response);
 	},function(error){
@@ -157,7 +158,8 @@ faxService.cancelReserve('1234567890', '015081013071300001',
 		console.log(error);
 	})
 
-faxService.getFaxResultRN('1234567890', '20180903150553',
+
+faxService.getFaxResultRN('1234567890', '20180927152011',
     function(response){
         console.log(response);
     },function(error){
