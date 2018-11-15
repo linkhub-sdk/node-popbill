@@ -273,3 +273,17 @@ messageService.getStates('1234567890',  reciptNumList, 'testkorea',
     },function(error){
         console.log(error);
     });
+
+messageService.getSentListURL('1234567890', 'testkorea',
+    function(url){
+        console.log('url is : '  +  url);
+    }, function(error){
+        console.log(error);
+    });
+
+messageService.getSenderNumberMgtURL('1234567890', 'testkorea',
+    function(url){
+        console.log('url is : '  +  url);
+    }, function(error){
+        console.log(error);
+    });

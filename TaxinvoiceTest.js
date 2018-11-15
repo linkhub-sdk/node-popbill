@@ -686,3 +686,33 @@ taxinvoiceService.updateEmailConfig('1234567890', "TAX_ISSUE", "true", "",
     }, function(error){
         console.log(error);
     });
+
+taxinvoiceService.getAccessURL('1234567890', 'testkorea',
+    function(url){
+        console.log('url is : '  +  url);
+    }, function(error){
+        console.log(error);
+    });
+
+taxinvoiceService.getChargeURL('1234567890', 'testkorea',
+    function(url){
+        console.log('url is : '  +  url);
+    }, function(error){
+        console.log(error);
+    });
+
+
+taxinvoiceService.getSealURL('1234567890', 'testkorea',
+    function(url){
+        console.log('url is : '  +  url);
+    }, function(error){
+        console.log(error);
+    });
+
+
+taxinvoiceService.getTaxCertURL('1234567890', 'testkorea',
+    function(url){
+        console.log('url is : '  +  url);
+    }, function(error){
+        console.log(error);
+    });
