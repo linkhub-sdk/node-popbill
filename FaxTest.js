@@ -194,3 +194,10 @@ faxService.getSenderNumberMgtURL('1234567890', 'testkorea',
     }, function (error) {
         console.log(error);
     });
+
+faxService.getPreviewURL('1234567890', '018091015373100001',
+    function (url) {
+        console.log('url is : ' + url);
+    }, function (error) {
+        console.log(error);
+    });
