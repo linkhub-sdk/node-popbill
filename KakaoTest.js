@@ -93,22 +93,22 @@ var btns = [
     }
 ];
 
-ATS
-kakaoService.sendATS_one('1234567890', '018080000079', '070-4304-2992', '테스트 템플릿 입니다.', "알림톡 대체 문자", "A", "", "010111222", "partner", 'testkorea', "20180903144355",
+// ATS
+kakaoService.sendATS_one('1234567890', '019020000163', '070-4304-2992', '테스트 템플릿 입니다.', "알림톡 대체 문자", "A", "", "010111222", "partner", 'testkorea', "",
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendATS_same('1234567890', '018080000079', '070-4304-2992', '테스트 템플릿 입니다.', "알림톡 대체 문자", "", "", kakaoReceiver_same, 'testkorea', '20180903144524',
+kakaoService.sendATS_same('1234567890', '019020000163', '070-4304-2992', '테스트 템플릿 입니다.', "알림톡 대체 문자", "", "", kakaoReceiver_same, 'testkorea', '',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
         console.log(err);
     });
 
-kakaoService.sendATS_multi('1234567890', '018080000079', '070-4304-2992', "C", "", kakaoReceiver_multi, "testkorea", '20180903144525',
+kakaoService.sendATS_multi('1234567890', '019020000163', '070-4304-2992', "C", "", kakaoReceiver_multi, "testkorea", '',
     function (receiptNum) {
         console.log("receiptNum is :" + receiptNum);
     }, function (err) {
