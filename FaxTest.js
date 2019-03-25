@@ -64,13 +64,20 @@ var Receivers = [
     },
 ]
 
-faxService.sendFax('1234567890', '07043042991', '070111222', '수신자명', FilePaths, '', '발신자명', true, 'RequestNum Test', '20180903150553',
+
+faxService.sendFax('1234567890', '07043042991', '070111222', '수신자명', FilePaths, '', '발신자명', true, 'RequestNum Test', '20190325103308', 'hklee0013',
     function (receiptNum) {
         console.log('receiptNum is : ' + receiptNum);
     }, function (error) {
         console.log(error);
     });
 
+faxService.sendFax('1234567890', '07043042991', '070111222', '수신자명', FilePaths, '', '발신자명', true, 'RequestNum Test', '20190325102936',
+    function (receiptNum) {
+        console.log('receiptNum is : ' + receiptNum);
+    }, function (error) {
+        console.log(error);
+    });
 
 faxService.sendFax('1234567890', '07043042991', '070111222', '수신자명', FilePaths, '', '발신자명', true, '팩스전송제목',
     function (receiptNum) {
@@ -98,7 +105,15 @@ var Receivers = [
     },
 ]
 
-receiptNum = "018090315112300001";
+receiptNum = "019032510331200001";
+
+
+faxService.resendFax('1234567890', receiptNum, '', '발신자명', '', '', '', '팩스재전송 제목(RequestNum)', '', 'hklee0011',
+    function (receiptNum) {
+        console.log('receiptNum is : ' + receiptNum);
+    }, function (error) {
+        console.log(error);
+    });
 
 faxService.resendFax('1234567890', receiptNum, '', '발신자명', '', '', '', '팩스재전송 제목(RequestNum)', '20180903153642',
     function (receiptNum) {
@@ -121,9 +136,9 @@ faxService.resendFax('1234567890', receiptNum, '07075103710', '발신자명', Re
     });
 
 
-OrgRequestNum = "20180903154412";
+OrgRequestNum = "20190325103308";
 
-faxService.resendFaxRN('1234567890', OrgRequestNum, '07043042992', '김현진', '010111222', '수신자', '20180904153946', 'resendFaxRN title', '20180903154009',
+faxService.resendFaxRN('1234567890', OrgRequestNum, '07043042992', '김현진', '010111222', '수신자', '', 'resendFaxRN title-2', '20190325103529-2', 'hklee0011',
     function (receiptNum) {
         console.log('receiptNum is : ' + receiptNum);
     }, function (error) {
@@ -159,13 +174,13 @@ faxService.cancelReserve('1234567890', '015081013071300001',
     })
 
 
-faxService.getFaxResultRN('1234567890', '20180927152011',
+faxService.getFaxResultRN('1234567890', '20190325102856',
     function (response) {
         console.log(response);
     }, function (error) {
         console.log(error);
     });
-
+//
 faxService.cancelReserveRN('1234567890', '20180903154009', 'testkorea',
     function (response) {
         console.log(response);
