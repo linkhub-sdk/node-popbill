@@ -1,6 +1,6 @@
 {
   "name": "popbill",
-  "version": "1.13.1",
+  "version": "1.13.2",
   "description": "Popbill API SDK for node. see www.popbill.com",
   "author": "Kim Seongjun <pallet027@gmail.com>",
   "contributors": [
