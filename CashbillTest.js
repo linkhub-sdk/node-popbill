@@ -34,14 +34,14 @@ cashbillService.search('1234567890', 'R', '20180901', '20180931', State, TradeTy
 
 
 var cashbill = {
-    mgtKey : '20170718-11',
+    mgtKey : '20191030-12',
     tradeType : '승인거래',
     tradeUsage : '소득공제용',
     taxationType : '과세',
 
     identityNum : '0101112222',
-    orgConfirmNum : '820116333',
-    orgTradeDate : '20170710',
+    //orgConfirmNum : '820116333',
+    //orgTradeDate : '20170710',
 
     franchiseCorpNum : '1234567890',
     franchiseCorpName : '발행자 상호_수정',
@@ -53,7 +53,7 @@ var cashbill = {
     customerName : '고객명',
     itemName : '상품명',
     orderNumber : '주문번호',
-    email : 'test@test.com',
+    email : 'code@linkhub.co.kr',
     hp : '000111222',
     fax : '07075103710',
 
@@ -63,7 +63,7 @@ var cashbill = {
     totalAmount : '11000',
 };
 
-cashbillService.registIssue('1234567890',cashbill, "즉시발행 메모",
+cashbillService.registIssue('1234567890',cashbill, "즉시발행 메모", "", "메일 제목 테스트",
     function(response){
         console.log(response);
     }, function(error){

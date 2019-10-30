@@ -1,6 +1,6 @@
 {
   "name": "popbill",
-  "version": "1.13.2",
+  "version": "1.14.0",
   "description": "Popbill API SDK for node. see www.popbill.com",
   "author": "Kim Seongjun <pallet027@gmail.com>",
   "contributors": [
@@ -11,10 +11,6 @@
     {
       "name": "JeongYohan",
       "email": "code@linkhub.co.kr"
-    },
-    {
-      "name": "HyunJin Kim",
-      "email": "hjkim@linkhub.co.kr"
     }
   ],
   "main": "index.js",

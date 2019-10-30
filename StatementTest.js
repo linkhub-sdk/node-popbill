@@ -62,12 +62,12 @@ statementService.checkMgtKeyInUse('1234567890','121','20150810-01',
 
 
 var statement = {
-    writeDate : '20160310',
+    writeDate : '20191030',
     purposeType : '영수',
     taxType : '과세',
     formCode : '',
     itemCode : 121,
-    mgtKey : '20160314-02',
+    mgtKey : '20191030-003',
     senderCorpNum : '1234567890',
     senderCorpName : '공급자 상호',
     senderAddr : '공급자 주소',
@@ -104,7 +104,7 @@ var statement = {
         {
             serialNum : 1,
             itemName : '품명',
-            purchaseDT : '20160309',
+            purchaseDT : '20191030',
             qty : '1',
             spec : '규격',
             supplyCost :'20000', //공급가액
@@ -125,7 +125,7 @@ var statement = {
     }
 };
 
-statementService.registIssue('1234567890', statement,
+statementService.registIssue('1234567890', statement, "메모", "", "안내 메일 제목",
     function(response){
         console.log(response)
     },
@@ -554,4 +554,3 @@ statementService.listEmailConfig('1234567890',
     }, function(error){
         console.log(error);
     });
-
