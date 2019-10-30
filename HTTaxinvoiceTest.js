@@ -143,7 +143,14 @@ htTaxinvoiceService.deleteDeptUser('1234567890',
     console.log(error);
   });
 
-htTaxinvoiceService.getPopUpURL('6798700433','201809194100020300000cd5', 'testkorea_linkhub',
+htTaxinvoiceService.getPopUpURL('1234567890','201809194100020300000cd5', 'testkorea_linkhub',
+    function(response){
+        console.log(response);
+    }, function (error){
+        console.log(error);
+    });
+
+htTaxinvoiceService.getPrintURL('1234567890','201809194100020300000cd5', 'testkorea_linkhub',
     function(response){
         console.log(response);
     }, function (error){
