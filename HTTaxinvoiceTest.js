@@ -20,7 +20,7 @@ htTaxinvoiceService.getChargeInfo('1234567890', 'testkorea',
 
 KeyType = popbill.MgtKeyType.SELL;
 
-htTaxinvoiceService.requestJob('1234567890', KeyType, 'W', '20160601', '20160831',
+htTaxinvoiceService.requestJob('1234567890', KeyType, 'S', '20190901', '20191231',
   function(response){
     console.log(response);
   }, function (error){
@@ -50,14 +50,14 @@ TaxRegIDType = 'S';
 TaxRegIDYN = '';
 TaxRegID = '';
 
-htTaxinvoiceService.search('1234567890', '016072114000000005', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, 1, 10, 'D', 'testkorea',
+htTaxinvoiceService.search('1234567890', '019103017000000003', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, 1, 10, 'D', '', '123',
   function(response){
     console.log(response);
   }, function(error){
     console.log(error);
 });
 
-htTaxinvoiceService.summary('1234567890', '016072114000000005', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, 'testkorea',
+htTaxinvoiceService.summary('1234567890', '019103017000000003', Type, TaxType, PurposeType, TaxRegIDType, TaxRegIDYN, TaxRegID, '', '',
   function(response){
     console.log(response);
   }, function(error){
