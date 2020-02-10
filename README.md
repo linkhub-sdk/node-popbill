@@ -1,5 +1,5 @@
 # node-popbill
-팝빌 node.js SDK v1.16.1
+팝빌 node.js SDK v1.16.2
 
 ## Install
 
