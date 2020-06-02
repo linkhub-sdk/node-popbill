@@ -11,6 +11,57 @@ popbill.config({
 
 var easyFinBankService = popbill.EasyFinBankService();
 
+
+easyFinBankService.closeBankAccount('1234567890', '0032' ,'1122197672406', '중도',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+});
+
+easyFinBankService.revokeCloseBankAccount('1234567890', '0032' ,'1122197672406',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+});
+
+var bankAccountInfo =  {
+  BankCode : '',
+  AccountNumber : '',
+  AccountPWD : '',
+  AccountType : '',
+  AccountName : '',
+  IdentityNumber : '',
+  BankID : '',
+  FastID : '',
+  FastPWD : '',
+  UsePeriod : '1',
+  Memo : ''
+};
+
+easyFinBankService.registBankAccount('1234567890', bankAccountInfo,
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+});
+
+easyFinBankService.updateBankAccount('1234567890', bankAccountInfo,
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+});
+
+
+easyFinBankService.getBankAccountInfo('1234567890', '0032' ,'1122197672406',
+  function(response){
+    console.log(response);
+  }, function(error){
+    console.log(error);
+});
+
 easyFinBankService.getChargeInfo('1234567890',
   function(response){
     console.log(response);
