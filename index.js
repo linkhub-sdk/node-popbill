@@ -8,6 +8,7 @@ var HTTaxinvoiceService = require('./lib/HTTaxinvoiceService');
 var HTCashbillService = require('./lib/HTCashbillService');
 var ClosedownService = require('./lib/ClosedownService');
 var EasyFinBankService = require('./lib/EasyFinBankService');
+var AccountCheckService = require('./lib/AccountCheckService');
 var linkhub = require('linkhub');
 
 var configuration = {LinkID: '', SecretKey: '', IsTest: false};
@@ -90,4 +91,11 @@ exports.EasyFinBankService = function () {
         this._EasyFinBankService = new EasyFinBankService(configuration);
     }
     return this._EasyFinBankService;
+}
+
+exports.AccountCheckService = function () {
+    if (!this._AccountCheckService) {
+        this._AccountCheckService = new AccountCheckService(configuration);
+    }
+    return this._AccountCheckService;
 }
