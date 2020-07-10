@@ -1,3 +1,6 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
+const https = require('https');
 var popbill = require('./');
 
 popbill.config({
@@ -63,6 +66,40 @@ var Receivers = [
         receiveNum: '07043042991',
     },
 ]
+
+var url = "https://test.popbill.com/images/main/bg_visual_area_TESTBED.jpg";
+var url2 = "https://d17ecin4ilxxme.cloudfront.net/popbill_test/pdfs/%ED%8C%9D%EB%B9%8C%20%ED%9C%B4%ED%8F%90%EC%97%85%EC%A1%B0%ED%9A%8C%20%EC%A0%9C%EC%95%88%EC%84%9C.pdf";
+
+const request = https.get(url2, function(res) {
+  var data = [];
+  res.on('data', function(chunk) {
+    data.push(chunk);
+  }).on('end', function() {
+
+    if(res.statusCode == 200) {
+      var binary = Buffer.concat(data);
+
+      var BinaryFiles = []
+      BinaryFiles.push({fileName: 'test.pdf', fileData: binary});
+      BinaryFiles.push({fileName: 'test.pdf', fileData: binary});
+
+      faxService.sendFaxBinary('1234567890', '07075103710', Receivers, BinaryFiles, '',
+          function (receiptNum) {
+              console.log('receiptNum is : ' + receiptNum);
+          }, function (error) {
+              console.log(error);
+          });
+
+    } else {
+        console.log(res.statusCode);
+    }
+
+  })
+}).on('error', function(err) {
+    console.log("Error during HTTP request");
+    console.log(err.message);
+});
+
 
 
 faxService.sendFax('1234567890', '07043042991', '070111222', '수신자명', FilePaths, '', '발신자명', true, 'RequestNum Test', '20190325103308', 'hklee0013',
@@ -180,7 +217,7 @@ faxService.getFaxResultRN('1234567890', '20190325102856',
     }, function (error) {
         console.log(error);
     });
-//
+
 faxService.cancelReserveRN('1234567890', '20180903154009', 'testkorea',
     function (response) {
         console.log(response);
