@@ -1,4 +1,5 @@
 var popbill = require('./');
+var fs = require('fs');
 
 popbill.config({
   LinkID :'TESTER',
@@ -11,27 +12,27 @@ popbill.config({
 
 var taxinvoiceService = popbill.TaxinvoiceService();
 
-SDate = '20171101';
-EDate = '20171231';
-State = ['3**','6**'];
-Type = ['N', 'M'];
-TaxType = ['T','N','Z'];
-IssueType = ['N','R','T'];
-LateOnly = null;
-PageNum = 1
-PerPage = 5
-TaxRegIDType = 'S'
-TaxRegIDYN = '';
-TaxRegID = '';
-QString = '';
-InterOPYN = '';
+// SDate = '20171101';
+// EDate = '20171231';
+// State = ['3**','6**'];
+// Type = ['N', 'M'];
+// TaxType = ['T','N','Z'];
+// IssueType = ['N','R','T'];
+// LateOnly = null;
+// PageNum = 1
+// PerPage = 5
+// TaxRegIDType = 'S'
+// TaxRegIDYN = '';
+// TaxRegID = '';
+// QString = '';
+// InterOPYN = '';
 
-taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate, State, Type, TaxType, LateOnly, 'D', PageNum, PerPage, TaxRegIDType, TaxRegIDYN, TaxRegID, QString, InterOPYN, 'testkorea', IssueType,
-  function(response){
-    console.log(response.total);
-  }, function(error){
-    console.log(error);
-});
+// taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate, State, Type, TaxType, LateOnly, 'D', PageNum, PerPage, TaxRegIDType, TaxRegIDYN, TaxRegID, QString, InterOPYN, 'testkorea', IssueType,
+//   function(response){
+//     console.log(response.total);
+//   }, function(error){
+//     console.log(error);
+// });
 
 // taxinvoiceService.getChargeInfo('1234567890', 'testkorea',
 //   function(response){
@@ -251,7 +252,7 @@ taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate
 //   }
 // );
 //
-// taxinvoiceService.getPartnerBalance('1234568790',
+// taxinvoiceService.getPartnerBalance('1234567890',
 //   function(Point){
 //     console.log(Point)
 //   }
@@ -634,6 +635,12 @@ taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate
 //     console.log(result);
 //   })
 //
+// taxinvoiceService.getOldPrintURL('1234567890', popbill.MgtKeyType.SELL, '20201119-002', 'testkorea',
+//   function(response){
+//     console.log(response);
+//   }, function(result){
+//     console.log(result);
+//   })
 // taxinvoiceService.getEPrintURL('1234567890', popbill.MgtKeyType.SELL, '20150810-11',
 //   function(response){
 //     console.log(response);
@@ -661,13 +668,32 @@ taxinvoiceService.search('1234567890',popbill.MgtKeyType.SELL, 'W', SDate, EDate
 //   }, function(result){
 //     console.log(result);
 //   })
+
+// taxinvoiceService.getOldPrintURL('1234567890', popbill.MgtKeyType.SELL, '20201119-002', 'testkorea',
+//   function(response){
+//     console.log(response);
+//   }, function(result){
+//     console.log(result);
+//   })
+
+// taxinvoiceService.getPDF('1234567890', popbill.MgtKeyType.SELL, '20201119-003', 'testkorea',
+//   function(bufpdf){
+//     console.log(bufpdf);
+//     var path = '../PDF_TEST/Taxinvoice_20201120-002.pdf'
+//     fs.appendFile(path, bufpdf, function(err) {
+//         if (err) console.log(err);
+//         console.log('Download success');
+//     })
+//   }, function(result){
+//     console.log(result);
+//   })
 //
-// taxinvoiceService.getPartnerURL('1234567890','CHRG',
-//   function(url){
-//     console.log('url is : '  +  url);
-//   }, function(error){
-//     console.log(error);
-//   });
+taxinvoiceService.getPartnerURL('1234567890','CHRG',
+  function(url){
+    console.log('url is : '  +  url);
+  }, function(error){
+    console.log(error);
+  });
 //
 //
 // taxinvoiceService.checkCertValidation('1234567890',
