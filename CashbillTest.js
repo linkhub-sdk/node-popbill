@@ -321,17 +321,24 @@ var cashbillService = popbill.CashbillService();
 //         console.log(error);
 //     });
 
-cashbillService.getPDF('1234567890', '20201117-PS003','',
-    function(bufpdf){
-        console.log(bufpdf);
-        var path = '../PDF_TEST/Cashbill_20201120-004.pdf'
-        fs.appendFile(path, bufpdf, function(err) {
-            if (err) console.log(err);
-            console.log('Download success');
-        })
-    }, function(result){
-        console.log(result);
-    })
+cashbillService.getViewURL('1234567890', '20210720PHP001','testkorea',
+     function(response){
+         console.log(response);
+     }, function(error){
+          console.log(error);
+      });
+
+// cashbillService.getPDF('1234567890', '20201117-PS003','',
+//     function(bufpdf){
+//         console.log(bufpdf);
+//         var path = '../PDF_TEST/Cashbill_20201120-004.pdf'
+//         fs.appendFile(path, bufpdf, function(err) {
+//             if (err) console.log(err);
+//             console.log('Download success');
+//         })
+//     }, function(result){
+//         console.log(result);
+//     })
 
 // cashbillService.revokeRegistIssue('1234567890', '20171114-20', '806100322', '20171113', false, '', 'testkorea', true, 1, '3300', '300', '0', '3600',
 //     function(response){
