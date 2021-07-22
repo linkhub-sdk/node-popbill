@@ -43,7 +43,15 @@ var kakaoService = popbill.KakaoService();
 //     }, function (response) {
 //         console.log(response)
 //     });
-//
+
+kakaoService.getATSTemplate('1234567890', '021030000624', 'testkorea',
+    function(response){
+        console.log(response);
+    }, function (err) {
+        console.log(err);
+    }
+);
+
 // kakaoService.listATSTemplate('1234567890',
 //     function (response) {
 //         console.log(response)
@@ -164,12 +172,12 @@ var btns = [
 //         console.log(err);
 //     });
 //
-kakaoService.sendFTS_same('1234567890', '@팝빌', '07043042991', '친구톡 동보 입니다', '대체문자 입니다.', 'A', '', '', kakaoReceiver_same, btns, 'testkorea', '',
-    function (receiptNum) {
-        console.log("receiptNum is :" + receiptNum);
-    }, function (err) {
-        console.log(err);
-    });
+// kakaoService.sendFTS_same('1234567890', '@팝빌', '07043042991', '친구톡 동보 입니다', '대체문자 입니다.', 'A', '', '', kakaoReceiver_same, btns, 'testkorea', '',
+//     function (receiptNum) {
+//         console.log("receiptNum is :" + receiptNum);
+//     }, function (err) {
+//         console.log(err);
+//     });
 
 // kakaoService.sendFTS_multi('1234567890', '@팝빌', '07043042991', 'A', '', '', kakaoReceiver_multi, null, 'testkorea', '',
 //     function (receiptNum) {
