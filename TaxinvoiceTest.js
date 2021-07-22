@@ -711,9 +711,17 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //   }
 // );
 
-taxinvoiceService.getUseHistoryURL('1234567890', '',
-  function(response){
-      console.log(response);
+// taxinvoiceService.getUseHistoryURL('1234567890', '',
+//   function(response){
+//       console.log(response);
+//   }, function(error){
+//       console.log(error);
+//   }
+// );
+
+taxinvoiceService.getContactInfo('1234567890', 'testkorea', '',
+  function(contactInfo){
+      console.log(contactInfo);
   }, function(error){
       console.log(error);
   }
