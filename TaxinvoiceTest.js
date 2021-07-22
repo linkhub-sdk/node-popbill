@@ -695,7 +695,23 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //     console.log(error);
 //   });
 
-taxinvoiceService.getSendToNTSConfig('1234567890', 'testkorea',
+// taxinvoiceService.getSendToNTSConfig('1234567890', 'testkorea',
+//   function(response){
+//       console.log(response);
+//   }, function(error){
+//       console.log(error);
+//   }
+// );
+
+// taxinvoiceService.getPaymentURL('1234567890', 'testkorea',
+//   function(response){
+//       console.log(response);
+//   }, function(error){
+//       console.log(error);
+//   }
+// );
+
+taxinvoiceService.getUseHistoryURL('1234567890', '',
   function(response){
       console.log(response);
   }, function(error){
