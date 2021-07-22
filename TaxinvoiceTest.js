@@ -688,12 +688,20 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //     console.log(result);
 //   })
 //
-taxinvoiceService.getPartnerURL('1234567890','CHRG',
-  function(url){
-    console.log('url is : '  +  url);
+// taxinvoiceService.getPartnerURL('1234567890','CHRG',
+//   function(url){
+//     console.log('url is : '  +  url);
+//   }, function(error){
+//     console.log(error);
+//   });
+
+taxinvoiceService.getSendToNTSConfig('1234567890', 'testkorea',
+  function(response){
+      console.log(response);
   }, function(error){
-    console.log(error);
-  });
+      console.log(error);
+  }
+);
 //
 //
 // taxinvoiceService.checkCertValidation('1234567890',
