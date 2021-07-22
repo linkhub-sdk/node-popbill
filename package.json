@@ -1,6 +1,6 @@
 {
   "name": "popbill",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "description": "Popbill API SDK for node. see www.popbill.com",
   "author": "Kim Seongjun <pallet027@gmail.com>",
   "contributors": [
@@ -18,7 +18,7 @@
     "node": ">= 0.10.0"
   },
   "dependencies": {
-    "linkhub": "^1.4.2",
+    "linkhub": "^1.6.0",
     "sync-request": "^2.0.0"
   },
   "repository": {
