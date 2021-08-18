@@ -44,7 +44,7 @@ var kakaoService = popbill.KakaoService();
 //         console.log(response)
 //     });
 
-kakaoService.getATSTemplate('1234567890', '021030000624', 'testkorea',
+kakaoService.getATSTemplate('1234567890', '021030000624  ', 'testkorea',
     function(response){
         console.log(response);
     }, function (err) {
@@ -66,16 +66,16 @@ kakaoService.getATSTemplate('1234567890', '021030000624', 'testkorea',
 //         console.log(response)
 //     });
 
-var kakaoReceiver_same = [
-    {
-        rcv: '010111222',
-        rcvnm: '동보_jetty'
-    },
-    {
-        rcv: '010111222',
-        rcvnm: '동보_tomcat'
-    }
-];
+// var kakaoReceiver_same = [
+//     {
+//         rcv: '010111222',
+//         rcvnm: '동보_jetty'
+//     },
+//     {
+//         rcv: '010111222',
+//         rcvnm: '동보_tomcat'
+//     }
+// ];
 
 var kakaoReceiver_multi = [
     {
