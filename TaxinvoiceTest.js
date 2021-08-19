@@ -215,13 +215,13 @@ for (var i =0; i <2; i++){
 //     console.log(error);
 //   });
 
-taxinvoiceService.getBulkResult('1234567890', SubmitID,
-  function(response){
-    console.log(response);
-  },
-  function(error){
-    console.log(error);
-  });
+// taxinvoiceService.getBulkResult('1234567890', SubmitID,
+//   function(response){
+//     console.log(response);
+//   },
+//   function(error){
+//     console.log(error);
+//   });
 //
 // taxinvoiceService.attachStatement('1234567890', popbill.MgtKeyType.SELL, "20160314-01", 121, "20160310-07",
 //   function(response){
@@ -789,13 +789,13 @@ taxinvoiceService.getBulkResult('1234567890', SubmitID,
 //   }
 // );
 
-// taxinvoiceService.getUseHistoryURL('1234567890', '',
-//   function(response){
-//       console.log(response);
-//   }, function(error){
-//       console.log(error);
-//   }
-// );
+taxinvoiceService.getUseHistoryURL('1234567890',
+  function(response){
+      console.log(response);
+  }, function(error){
+      console.log(error);
+  }
+);
 
 // taxinvoiceService.getContactInfo('1234567890', 'testkorea', '',
 //   function(contactInfo){
