@@ -34,12 +34,12 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //     console.log(error);
 // });
 
-// taxinvoiceService.getChargeInfo('1234567890', 'testkorea',
-//   function(response){
-//     console.log(response);
-//   }, function(result){
-//     console.log(result);
-//   });
+taxinvoiceService.getChargeInfo('1234567890', 'testkorea',
+  function(response){
+    console.log(response);
+  }, function(result){
+    console.log(result);
+  });
 //
 var SubmitID = 'Node-bulk04';
 var taxinvoiceList = [];
