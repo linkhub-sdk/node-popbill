@@ -17,23 +17,58 @@ accountCheckService.getChargeInfo('1234567890', 'testkorea',
 	}, function(error){
 		console.log(error);
 	});
+	
+accountCheckService.getChargeInfo('1234567890','성명', 'testkorea',
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	});
 
-accountCheckService.getUnitCost('1234567890',
+accountCheckService.getChargeInfo('1234567890','실명', 'testkorea',
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	});
+
+
+	accountCheckService.getUnitCost('1234567890',
 	function(response){
 		console.log('Unitcost : ' + response);
 	}, function(error){
 		console.log(error);
 	});
 
-accountCheckService.getBalance('1234567890',
+	accountCheckService.getUnitCost('1234567890','성명',
+	function(response){
+		console.log('Unitcost : ' + response);
+	}, function(error){
+		console.log(error);
+	});
+
+	accountCheckService.getUnitCost('1234567890','실명',
+	function(response){
+		console.log('Unitcost : ' + response);
+	}, function(error){
+		console.log(error);
+	});
+
+	accountCheckService.getBalance('1234567890',
 	function(response){
 		console.log('Balance : ' + response);
 	}, function(error){
 		console.log(error);
 	});
 
+accountCheckService.checkAccountInfo('1234567890', '0004', '1234567890',
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	});
 
-accountCheckService.checkAccountInfo('1234567890', '0004', '94324511758',
+accountCheckService.checkDepositorInfo('1234567890', '0004', '1234567890','B','1234567890',
 	function(response){
 		console.log(response);
 	}, function(error){
