@@ -11,6 +11,13 @@ popbill.config({
 
 var accountCheckService = popbill.AccountCheckService();
 
+accountCheckService.getChargeInfo('1234567890',
+	function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	});
+	
 accountCheckService.getChargeInfo('1234567890', 'testkorea',
 	function(response){
 		console.log(response);
@@ -18,7 +25,7 @@ accountCheckService.getChargeInfo('1234567890', 'testkorea',
 		console.log(error);
 	});
 	
-accountCheckService.getChargeInfo('1234567890','성명', 'testkorea',
+accountCheckService.getChargeInfo('1234567890','성명', '',
 	function(response){
 		console.log(response);
 	}, function(error){
