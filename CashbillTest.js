@@ -25,7 +25,43 @@ var cashbillService = popbill.CashbillService();
 // TaxationType = ['T', 'N'];
 // TradeOpt = ['N', 'B', 'T'];
 // QString = '01012345678';
-//
+
+var SubmitID = 'Node-bulk02';
+var cashbillList = [];
+for (var i =0; i < 50; i++){
+    var cashbill = {
+        mgtKey : SubmitID + '-' + i,
+        tradeType : '승인거래',
+        tradeUsage : '소득공제용',
+        taxationType : '과세',
+
+        identityNum : '0101112222',
+        //orgConfirmNum : '820116333',
+        //orgTradeDate : '20170710',
+
+        franchiseCorpNum : '1234567890',
+        franchiseCorpName : '발행자 상호_수정',
+        franchiseCEOName : '발행자 대표자 성명',
+        franchiseAddr : '발행자 주소',
+        franchiseTEL : '07075103710',
+
+        smssendYN : false,
+        customerName : '고객명',
+        itemName : '상품명',
+        orderNumber : '주문번호',
+        email : 'code@text.com',
+        hp : '000111222',
+        fax : '07075103710',
+
+        supplyCost : '10000',
+        tax : '1000',
+        serviceFee : '0',
+        totalAmount : '11000',
+    };
+
+    cashbillList.push(cashbill);
+}
+
 // cashbillService.search('1234567890', 'R', '20180901', '20180931', State, TradeType, TradeUsage, TradeOpt, TaxationType, QString, 'D', 1, 50,
 //     function(response){
 //         console.log(response);
@@ -70,6 +106,22 @@ var cashbillService = popbill.CashbillService();
 //     }, function(error){
 //         console.log(error);
 //     });
+
+cashbillService.bulkSubmit('1234567890', SubmitID, cashbillList,
+  function(response){
+    console.log(response);
+  },
+  function(error){
+    console.log(error);
+  });
+
+cashbillService.getBulkResult('1234567890', SubmitID,
+  function(response){
+    console.log(response);
+  },
+  function(error){
+    console.log(error);
+  });
 //
 // cashbillService.getBalance('1234567890',
 //     function(Point){
@@ -321,12 +373,12 @@ var cashbillService = popbill.CashbillService();
 //         console.log(error);
 //     });
 
-cashbillService.getViewURL('1234567890', '20210720PHP001','testkorea',
-     function(response){
-         console.log(response);
-     }, function(error){
-          console.log(error);
-      });
+// cashbillService.getViewURL('1234567890', '20210720PHP001','testkorea',
+//      function(response){
+//          console.log(response);
+//      }, function(error){
+//           console.log(error);
+//       });
 
 // cashbillService.getPDF('1234567890', '20201117-PS003','',
 //     function(bufpdf){
