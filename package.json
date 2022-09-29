@@ -1,47 +1,50 @@
 {
-  "name": "popbill",
-  "version": "1.54.1",
-  "description": "Popbill API SDK for node. see www.popbill.com",
-  "author": "Kim Seongjun <pallet027@gmail.com>",
-  "contributors": [
-    {
-      "name": "Kim Seongjun",
-      "email": "pallet027@gmail.com"
+    "name": "popbill",
+    "version": "1.55.0",
+    "description": "Popbill API SDK for node. see www.popbill.com",
+    "author": "Kim Seongjun <pallet027@gmail.com>",
+    "contributors": [
+      {
+        "name": "Kim Seongjun",
+        "email": "pallet027@gmail.com"
+      },
+      {
+        "name": "JeongYohan",
+        "email": "code@linkhubcorp.com"
+      }
+    ],
+    "main": "index.js",
+    "engines": {
+      "node": ">= 0.10.0"
     },
-    {
-      "name": "JeongYohan",
-      "email": "code@linkhubcorp.com"
-    }
-  ],
-  "main": "index.js",
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "dependencies": {
-    "linkhub": "^1.7.0",
-    "sync-request": "^2.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/linkhub-sdk/node-popbill.git"
-  },
-  "bugs": {
-    "url": "https://github.com/linkhub-sdk/node-popbill/issues"
-  },
-  "keywords": [
-    "popbill",
-    "taxinvoice",
-    "cashbill",
-    "statement",
-    "closedown",
-    "hometax",
-    "SMS",
-    "KakaoTalk",
-    "FAX",
-    "api",
-    "sdk"
-  ],
-  "preferGlobal": true,
-  "subdomain": "popbill",
-  "license": "MIT"
+    "dependencies": {
+      "linkhub": "^1.7.0",
+      "sync-request": "^2.0.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/linkhub-sdk/node-popbill.git"
+    },
+    "bugs": {
+      "url": "https://github.com/linkhub-sdk/node-popbill/issues"
+    },
+    "keywords": [
+      "popbill",
+      "taxinvoice",
+      "cashbill",
+      "statement",
+      "closedown",
+      "bizinfocheck",
+      "hometax",
+      "accountcheck",
+      "SMS",
+      "KakaoTalk",
+      "FAX",
+      "api",
+      "sdk"
+    ],
+    "preferGlobal": true,
+    "subdomain": "popbill",
+    "license": "MIT"
 }
+  
