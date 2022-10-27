@@ -257,6 +257,21 @@ messageService.cancelReserveRN('1234567890', '20180810161021',
         console.log(error);
     });
 
+messageService.cancelReservebyRCV('1234567890', '015081013000000006','01012341234','',
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    });
+
+
+messageService.cancelReserveRNbyRCV('1234567890', '20180810161021','01012341234','',
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    });
+
 messageService.getSenderNumberList('1234567890', 'testkorea',
     function(response){
         console.log(response);
