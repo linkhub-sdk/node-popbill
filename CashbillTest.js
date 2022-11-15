@@ -392,12 +392,12 @@ cashbillService.getBulkResult('1234567890', SubmitID,
 //         console.log(result);
 //     })
 
-// cashbillService.revokeRegistIssue('1234567890', '20171114-20', '806100322', '20171113', false, '', 'testkorea', true, 1, '3300', '300', '0', '3600',
-//     function(response){
-//         console.log(response);
-//     }, function(error){
-//         console.log(error);
-//     });
+cashbillService.revokeRegistIssue('1234567890', '20221115-01', 'TB0000172', '20221109', false, '', 'testkorea', true, 1, '3300', '300', '0', '3600','','',
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    });
 //
 // cashbillService.revokeRegister('1234567890', '20171114-19', '820116333', '20170711', false, 'testkorea', true, 1, '3300', '300', '0', '3600',
 //     function(response){
