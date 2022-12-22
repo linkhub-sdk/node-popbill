@@ -302,3 +302,10 @@ messageService.getSenderNumberMgtURL('1234567890', 'testkorea',
     }, function(error){
         console.log(error);
     });
+
+messageService.checkAutoDenyNumber('0000000001',
+    function(response){
+        console.log(response);
+    },function(error){
+        console.log(error);
+    });
