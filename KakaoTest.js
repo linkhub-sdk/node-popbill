@@ -45,7 +45,7 @@ var kakaoService = popbill.KakaoService();
 //     });
 
 kakaoService.getATSTemplate('1234567890', '021030000624  ', 'testkorea',
-    function(response){
+    function (response) {
         console.log(response);
     }, function (err) {
         console.log(err);
@@ -340,3 +340,28 @@ var FilePath = ['./test.jpg'];
 //     }, function (error) {
 //         console.log(error);
 //     });
+
+kakaoService.cancelReservebyRCV('1234567890', '023030815215900001', '140000', 'testkorea',
+    function (result) {
+        console.log(result);
+    }, function (err) {
+        console.error(err);
+    })
+kakaoService.cancelReserveRNbyRCV('1234567890', '20230308002', '140000', 'testkorea',
+    function (result) {
+        console.log(result);
+    }, function (err) {
+        console.error(err);
+    })
+kakaoService.cancelReservebyRCV('1234567890', '023030815215900001', '140000',
+    function (result) {
+        console.log(result);
+    }, function (err) {
+        console.error(err);
+    })
+kakaoService.cancelReserveRNbyRCV('1234567890', '20230308002', '140000',
+    function (result) {
+        console.log(result);
+    }, function (err) {
+        console.error(err);
+    })
