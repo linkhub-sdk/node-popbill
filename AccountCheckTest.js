@@ -104,16 +104,16 @@ var accountCheckService = popbill.AccountCheckService();
 //     console.log(error);
 //   }
 // );
-accountCheckService.quitMember(
-  "0000007005",
-  "회원탈퇴 테스트합니다",
-  "test_7005",
-  function (response) {
-    console.log("success-----");
-    console.log(response);
-  },
-  function (error) {
-    console.log("failed-----");
-    console.log(error);
-  }
-);
+// accountCheckService.quitMember(
+//   "0000007005",
+//   "회원탈퇴 테스트합니다",
+//   "test_7005",
+//   function (response) {
+//     console.log("success-----");
+//     console.log(response);
+//   },
+//   function (error) {
+//     console.log("failed-----");
+//     console.log(error);
+//   }
+// );
