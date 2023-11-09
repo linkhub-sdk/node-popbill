@@ -34,74 +34,74 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //     console.log(error);
 // });
 
-taxinvoiceService.getChargeInfo('1234567890', 'testkorea',
-  function(response){
-    console.log(response);
-  }, function(result){
-    console.log(result);
-  });
+// taxinvoiceService.getChargeInfo('1234567890', 'testkorea',
+//   function(response){
+//     console.log(response);
+//   }, function(result){
+//     console.log(result);
+//   });
+// //
+// var SubmitID = 'Node-bulk04';
+// var taxinvoiceList = [];
+// for (var i =0; i <2; i++){
+//     Taxinvoice = {
+//         writeDate: '20210622',
+//         chargeDirection: '정과금',
+//         issueType: '정발행',
+//         purposeType: '영수',
+//         issueTiming: '직접발행',
+//         taxType: '과세',
 //
-var SubmitID = 'Node-bulk04';
-var taxinvoiceList = [];
-for (var i =0; i <2; i++){
-    Taxinvoice = {
-        writeDate: '20210622',
-        chargeDirection: '정과금',
-        issueType: '정발행',
-        purposeType: '영수',
-        issueTiming: '직접발행',
-        taxType: '과세',
-
-        //공급자
-        invoicerCorpNum: '1234567890',
-        invoicerMgtKey: SubmitID + i,
-        invoicerTaxRegID: '' ,
-        invoicerCorpName: '공급자 상호',
-        invoicerCEOName: '대표자 성명',
-        invoicerAddr: '공급자 주소',
-        invoicerBizClass: '공급자 업종',
-        invoicerBizType: '공급자 업태',
-        invoicerContactName: '공급자 담당자명',
-        invoicerTEL: '070-7510-3710',
-        invoicerHP: '010-000-111',
-        invoicerEmail: 'test@test.com',
-        invoicerSMSSendYN: false,
-
-        //공급받는자
-        invoiceeType: '사업자',
-        invoiceeCorpNum: '8888888888',
-        invoiceeMgtKey: '',
-        invoiceeTaxRegID: '',
-        invoiceeCorpName: '공급받는자 상호',
-        invoiceeCEOName: '공급받는자 대표자 성명',
-        invoiceeAddr: '공급받는자 주소',
-        invoiceeBizClass: '공급받는자 업종',
-        invoiceeBizType: '공급받는자 업태',
-        invoiceeContactName1: '공급받는자 담당자명',
-        invoiceeTEL1: '010-111-222',
-        invoiceeHP1: '070-111-222',
-        invoiceeEmail1: 'test@test.com',
-        invoiceeSMSSendYN: false,
-        taxTotal: '2000',
-        supplyCostTotal: '20000',
-        totalAmount: '22000',
-        //modifyCode
-        //originalTaxinvoiceKey
-        serialNum: '123',
-        cash: '',
-        chkBill: '',
-        note: '',
-        credit: '',
-        remark1: '비고1',
-        remark2: '',
-        remark3: '',
-        kwon: '',
-        ho: '',
-        businessLicenseYN: false,
-        bankBookYN: false,
-    };
-    taxinvoiceList.push(Taxinvoice);
-};
+//         //공급자
+//         invoicerCorpNum: '1234567890',
+//         invoicerMgtKey: SubmitID + i,
+//         invoicerTaxRegID: '' ,
+//         invoicerCorpName: '공급자 상호',
+//         invoicerCEOName: '대표자 성명',
+//         invoicerAddr: '공급자 주소',
+//         invoicerBizClass: '공급자 업종',
+//         invoicerBizType: '공급자 업태',
+//         invoicerContactName: '공급자 담당자명',
+//         invoicerTEL: '070-7510-3710',
+//         invoicerHP: '010-000-111',
+//         invoicerEmail: 'test@test.com',
+//         invoicerSMSSendYN: false,
+//
+//         //공급받는자
+//         invoiceeType: '사업자',
+//         invoiceeCorpNum: '8888888888',
+//         invoiceeMgtKey: '',
+//         invoiceeTaxRegID: '',
+//         invoiceeCorpName: '공급받는자 상호',
+//         invoiceeCEOName: '공급받는자 대표자 성명',
+//         invoiceeAddr: '공급받는자 주소',
+//         invoiceeBizClass: '공급받는자 업종',
+//         invoiceeBizType: '공급받는자 업태',
+//         invoiceeContactName1: '공급받는자 담당자명',
+//         invoiceeTEL1: '010-111-222',
+//         invoiceeHP1: '070-111-222',
+//         invoiceeEmail1: 'test@test.com',
+//         invoiceeSMSSendYN: false,
+//         taxTotal: '2000',
+//         supplyCostTotal: '20000',
+//         totalAmount: '22000',
+//         //modifyCode
+//         //originalTaxinvoiceKey
+//         serialNum: '123',
+//         cash: '',
+//         chkBill: '',
+//         note: '',
+//         credit: '',
+//         remark1: '비고1',
+//         remark2: '',
+//         remark3: '',
+//         kwon: '',
+//         ho: '',
+//         businessLicenseYN: false,
+//         bankBookYN: false,
+//     };
+//     taxinvoiceList.push(Taxinvoice);
+// };
 
 // Taxinvoice = {
 //     writeDate: '20210722',
@@ -788,14 +788,14 @@ for (var i =0; i <2; i++){
 //       console.log(error);
 //   }
 // );
-
-taxinvoiceService.getUseHistoryURL('1234567890',
-  function(response){
-      console.log(response);
-  }, function(error){
-      console.log(error);
-  }
-);
+//
+// taxinvoiceService.getUseHistoryURL('1234567890',
+//   function(response){
+//       console.log(response);
+//   }, function(error){
+//       console.log(error);
+//   }
+// );
 
 // taxinvoiceService.getContactInfo('1234567890', 'testkorea', '',
 //   function(contactInfo){
@@ -864,3 +864,10 @@ taxinvoiceService.getUseHistoryURL('1234567890',
 //     }, function(error){
 //         console.log(error);
 //     });
+
+taxinvoiceService.registTaxCert('1234567890', publicKey, privateKey, cipher, 'testkorea',
+    function(response){
+        console.log(response);
+    }, function(error){
+        console.log(error);
+    });
