@@ -865,6 +865,7 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //         console.log(error);
 //     });
 
+
 taxinvoiceService.registTaxCert('1234567890', publicKey, privateKey, cipher, 'testkorea',
     function(response){
         console.log(response);
