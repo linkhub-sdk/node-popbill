@@ -18,7 +18,7 @@
     "node": ">= 0.10.0"
   },
   "dependencies": {
-    "linkhub": "^1.8.2"
+    "linkhub": "^1.8.3"
   },
   "repository": {
     "type": "git",
