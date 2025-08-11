@@ -1,5 +1,10 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 var popbill = require('./');
 var fs = require('fs');
+
+const https = require('https');
+
 
 popbill.config({
   LinkID :'TESTER',
@@ -562,6 +567,37 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //     console.log(error);
 //   });
 //
+
+var url2 = "https://d17ecin4ilxxme.cloudfront.net/popbill_test/pdfs/%ED%8C%9D%EB%B9%8C%20%ED%9C%B4%ED%8F%90%EC%97%85%EC%A1%B0%ED%9A%8C%20%EC%A0%9C%EC%95%88%EC%84%9C.pdf";
+
+const request = https.get(url2, function(res) {
+  var data = [];
+  res.on('data', function(chunk) {
+    data.push(chunk);
+  }).on('end', function() {
+
+    if(res.statusCode == 200) {
+      var binary = Buffer.concat(data);
+
+      var BinaryFiles = {fileName: 'test.pdf', fileData: binary}
+
+      taxinvoiceService.attachFileBinary('1234567890', popbill.MgtKeyType.SELL, '20250811-01', BinaryFiles, '',
+          function (response) {
+              console.log(response);
+          }, function (error) {
+              console.log(error);
+          });
+
+    } else {
+        console.log(res.statusCode);
+    }
+
+  })
+}).on('error', function(err) {
+    console.log("Error during HTTP request");
+    console.log(err.message);
+});
+
 // var FilePaths = ['./테스트.jpg']; // 파일경로
 // var fileName = FilePaths[0].replace(/^.*[\\\/]/, ''); // 파일명
 //
@@ -864,11 +900,3 @@ var taxinvoiceService = popbill.TaxinvoiceService();
 //     }, function(error){
 //         console.log(error);
 //     });
-
-
-taxinvoiceService.registTaxCert('1234567890', publicKey, privateKey, cipher, 'testkorea',
-    function(response){
-        console.log(response);
-    }, function(error){
-        console.log(error);
-    });
